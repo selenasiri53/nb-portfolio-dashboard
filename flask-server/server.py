@@ -2,7 +2,6 @@ from flask import Flask
 
 app = Flask(__name__)
 
-# API Route
 @app.route("/funds")
 def funds():
     return {"funds": ["Fund1", "Fund2", "Fund3"]}
