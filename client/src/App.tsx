@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import DashboardContainer from "./components/DashboardContainer";
 
 interface FundsData {
   funds: string[];
@@ -40,7 +41,7 @@ function App() {
           </p>
         ))
       )}
-      
+      <DashboardContainer />
     </div>
   );
 }
