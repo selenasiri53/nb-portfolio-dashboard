@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 
-// Define a type for the data returned by the API
 interface FundsData {
   funds: string[];
 }
