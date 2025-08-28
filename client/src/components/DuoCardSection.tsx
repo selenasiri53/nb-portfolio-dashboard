@@ -6,6 +6,7 @@ import {
     Title,
   } from "chart.js";
   import { Pie } from "react-chartjs-2";
+import FundsTable from "./charts/FundsTable";
   
   ChartJS.register(ArcElement, Tooltip, Legend, Title);
   
@@ -63,9 +64,9 @@ import {
         </div>
   
         {/* Data Logs Card */}
-        <div className="col-span-2 card rounded-2xl p-8 bg-white/20 min-h-80">
-          <h2 className="text-white text-xl font-semibold mb-4">Data Logs</h2>
-          {/* Add your data log content here */}
+        <div className="col-span-2 card rounded-2xl p-8 bg-white min-h-80">
+          <h2 className="text-neutral-900 text-2xl font-thin mb-4">Top stocks for Fund1</h2>
+          <FundsTable />
         </div>
       </div>
     );

@@ -1,6 +1,10 @@
+
+import '@fontsource/inter';
+
 // import { useState, useEffect } from "react";
-import DashboardContainer from "./components/DashboardContainer";
+import DashboardContainer from "./pages/Home";
 import Header from "./components/Header"
+import Home from './pages/Home';
 
 // interface FundsData {
 //   funds: string[];
@@ -43,7 +47,7 @@ function App() {
         ))
       )} */}
       <Header />
-      <DashboardContainer />
+      <Home />
     </div>
   );
 }
