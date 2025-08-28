@@ -1,6 +1,11 @@
+import type { ReactNode } from 'react';
 import Navbar from './Navbar'
 
-const DashboardLayout = ({ children }) => {
+interface DashboardLayoutProps {
+  children: ReactNode; // This allows any valid React children
+}
+
+const DashboardLayout = ({ children }: DashboardLayoutProps) => {
   return (
     <div className="lg:min-h-[88vh] border-[0.5px] border-neutral-500 rounded-4xl">
       <div className="lg:flex">

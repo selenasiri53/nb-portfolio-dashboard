@@ -1,24 +1,32 @@
-import { LayoutDashboard } from 'lucide-react';
-import { TrendingUp } from 'lucide-react'
-import { Users } from 'lucide-react';
+import { Link } from "react-router-dom";
+import { LayoutDashboard, TrendingUp, Users } from "lucide-react";
 
 const Navbar = () => {
   return (
     <div className="lg:w-40px lg:px-2 lg:py-4 min-h-[88vh] bg-neutral-100 rounded-l-4xl space-y-4">
-            {/* home page */}
-            <div className="hover:bg-neutral-200 p-3 rounded-2xl">
-                <LayoutDashboard size={28}/>
-            </div>
-            {/* stocks */}
-            <div className="hover:bg-neutral-200 p-3 rounded-2xl">
-                <TrendingUp size={28} />
-            </div>
-            {/* peer comparison */}
-            <div className="hover:bg-neutral-200 p-3 rounded-2xl">
-                <Users size={28} />
-        </div>
+      {/* Dashboard (Funds) */}
+      <Link
+        to="/dashboard"
+        className="hover:bg-neutral-200 p-3 rounded-2xl flex justify-center items-center"
+      >
+        <LayoutDashboard size={28} />
+      </Link>
+      {/* Fund detail */}
+      <Link
+        to="/dashboard-detail"
+        className="hover:bg-neutral-200 p-3 rounded-2xl flex justify-center items-center"
+      >
+        <TrendingUp size={28} />
+      </Link>
+      {/* Peer comparison */}
+      <Link
+        to="/peers"
+        className="hover:bg-neutral-200 p-3 rounded-2xl flex justify-center items-center"
+      >
+        <Users size={28} />
+      </Link>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
