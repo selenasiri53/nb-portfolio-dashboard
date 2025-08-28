@@ -12,11 +12,10 @@ const Home = () => {
             Your top stocks increased 12% this week
           </h3>
           <div className="space-y-3">
-            {/* <TrioCardSection /> */}
+            <TrioCardSection />
             <DuoCardSection />
-          <LineChartComponent />
+            <LineChartComponent />
           </div>
-          
         </div>
     </DashboardLayout>
   );

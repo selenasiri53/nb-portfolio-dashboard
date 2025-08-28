@@ -3,7 +3,8 @@ import "@fontsource/inter";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./pages/Home";
-import FundDetailPage from "./pages/FundDetailPage";
+import Funds from "./pages/Funds";
+import Peers from "./pages/Peers";
 
 function App() {
   return (
@@ -13,8 +14,9 @@ function App() {
         {/* Router */}
         <Routes>
           <Route path="/dashboard" element={<Home />} />
-          <Route path="/dashboard-detail" element={<FundDetailPage />} />
-          <Route path="/peers" element={<Home />} />
+          <Route path="/dashboard-detail" element={<Funds />} />
+          <Route path="/peers" element={<Peers />} />
+          {/* default path */}
           <Route path="*" element={<Home />} />
         </Routes>
       </div>

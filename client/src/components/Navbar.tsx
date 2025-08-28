@@ -9,21 +9,21 @@ const Navbar = () => {
         to="/dashboard"
         className="hover:bg-neutral-200 p-3 rounded-2xl flex justify-center items-center"
       >
-        <LayoutDashboard size={28} />
+        <LayoutDashboard size={24} />
       </Link>
       {/* Fund detail */}
       <Link
         to="/dashboard-detail"
         className="hover:bg-neutral-200 p-3 rounded-2xl flex justify-center items-center"
       >
-        <TrendingUp size={28} />
+        <TrendingUp size={24} />
       </Link>
       {/* Peer comparison */}
       <Link
         to="/peers"
         className="hover:bg-neutral-200 p-3 rounded-2xl flex justify-center items-center"
       >
-        <Users size={28} />
+        <Users size={24} />
       </Link>
     </div>
   );

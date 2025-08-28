@@ -1,41 +1,65 @@
 import Table from '@mui/joy/Table';
+import { useState } from 'react';
+import Checkbox from '@mui/joy/Checkbox';
+import { Eye } from 'lucide-react';
 
-function createData(
-  name: string,
-  calories: number,
-  fat: number,
-  carbs: number,
-  protein: number,
-) {
-  return { name, calories, fat, carbs, protein };
+function createData(fund: string, strategy: string, fundReturn: string) {
+  return { fund, strategy, fundReturn };
 }
 
 const rows = [
-  createData('Tech Growth Fund', 159, 6.0, 24, 4.0),
-  createData('Safe Bonds Fund', 237, 9.0, 37, 4.3),
-  createData('Sales Fund', 262, 16.0, 24, 6.0),
-  createData('Meta', 305, 3.7, 67, 4.3),
-  createData('Disney', 356, 16.0, 49, 3.9),
+  createData('Tech Growth Fund', 'Focus on Tech', '5.00%'),
+  createData('Safe Bonds Fund', 'Government Bonds', '3.50%'),
+  createData('Sales Fund', 'Revenue Growth', '4.20%'),
+  createData('Energy Fund', 'Focus on Energy', '6.10%'),
+  createData('Healthcare Fund', 'Healthcare Sector', '4.75%'),
 ];
 
 export default function TableHover() {
+  const [selected, setSelected] = useState<string[]>([]);
+
+  const toggleSelect = (fund: string) => {
+    setSelected((prev) =>
+      prev.includes(fund) ? prev.filter((f) => f !== fund) : [...prev, fund]
+    );
+  };
+
   return (
-    <Table hoverRow>
+    <Table className="bg-white">
       <thead>
         <tr>
-          <th style={{ width: '40%' }}>Fund(40%)</th>
+          <th style={{ width: '48%' }}>Fund</th>
           <th>Strategy</th>
           <th>Return</th>
         </tr>
       </thead>
       <tbody>
-        {rows.map((row) => (
-          <tr key={row.name}>
-            <td>{row.name}</td>
-            <td>{row.calories}</td>
-            <td>{row.fat}</td>
-          </tr>
-        ))}
+        {rows.map((row) => {
+          const isSelected = selected.includes(row.fund);
+
+          return (
+            <tr
+              key={row.fund}
+              onClick={() => toggleSelect(row.fund)}
+              className={`
+                cursor-pointer
+                transition-all
+                ${
+                  isSelected
+                    ? 'bg-teal-100 rounded-2xl' // selected style
+                    : 'hover:bg-teal-50 hover:rounded-2xl' // hover style
+                }
+              `}
+            >
+              <td>{row.fund}</td>
+              <td>{row.strategy}</td>
+              <td>{row.fundReturn}</td>
+              <td>
+                <Eye size={18} />
+              </td>
+            </tr>
+          );
+        })}
       </tbody>
     </Table>
   );
