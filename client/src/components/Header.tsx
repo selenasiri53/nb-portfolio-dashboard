@@ -1,6 +1,6 @@
 const Header = () => {
   return (
-    <div className="flex items-center justify-between mx-2 md:mx-8 lg:mx-32 text-white tracking-wider font-thin p-2 pb-0">
+    <div className="flex items-center justify-between text-white tracking-wider font-thin px-2 py-6">
     <h1 className="text-3xl lg:text-4xl">Hello, <span className="text-indigo-200">welcome</span></h1>
     {/* right side */}
     <div

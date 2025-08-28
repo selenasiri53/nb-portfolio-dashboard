@@ -32,7 +32,7 @@ function App() {
   // }
 
   return (
-    <div className="p-4">
+    <div className="my-2 mx-2 md:mx-8 lg:mx-32">
       {/* {data.funds.length === 0 ? (
         <p>No funds available</p>
       ) : (
