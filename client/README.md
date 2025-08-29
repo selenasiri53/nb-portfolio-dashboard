@@ -1,40 +1,37 @@
 # Server Setup:
-mkdir flask-server
-cd flask-server
-touch server.py
-python -m venv venv
-source venv/bin/activate
-pip3 install Flask
-pip install --upgrade pip
-python server.py
-python3 server.py
-clear
-python server.py
-pip install Flask
-python server.py
+$ mkdir server && cd server
+$ python3 -m venv venv
+$ source venv/bin/activate
+$ pip install django djangorestframework django-cors-headers
+$ django-admin startproject server .
+$ python manage.py startapp api
+$ python manage.py migrate
+$ python manage.py runserver
+
+# backend/server/settings.py
+1. Add to INSTALLED_APPS
+```
+    'rest_framework',
+    'corsheaders',
+```
+2. Add to MIDDLEWARE
+```
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
+```
+3. Add for frontend access:
+```
+  CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",  # Vite default port
+  ] 
+```
+
+# Connecting with the frontend:
+In the client folder:
+
+$ npm install axios
 
 # React + TypeScript + Vite
-# Vite config:
-<!-- Set up a proxy to tell React where to find the backend data - allows shorter api calls '/funds' instead of the full api path -->
-<!-- Configure tailwind for Vite: https://tailwindcss.com/docs/installation/using-vite -->
-```
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import tailwindcss from '@tailwindcss/vite'
-
-export default defineConfig({
-  plugins: [react(), tailwindcss()],
-  server: {
-    proxy: {
-      "/funds": {
-        target: "http://localhost:5000",
-        changeOrigin: true,
-        secure: false,
-      },
-    },
-  },
-});
-```
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
