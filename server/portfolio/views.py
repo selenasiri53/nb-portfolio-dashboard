@@ -24,9 +24,9 @@ class PortfolioManagerListView(generics.ListCreateAPIView):
     queryset = PortfolioManager.objects.all()
     serializer_class = PortfolioManagerSerializer
 
-# class PortfolioManagerDetailView(generics.RetrieveAPIView):
-#     queryset = PortfolioManager.objects.all()
-#     serializer_class = PortfolioManagerSerializer
+class PortfolioManagerDetailView(generics.RetrieveAPIView):
+    queryset = PortfolioManager.objects.all()
+    serializer_class = PortfolioManagerSerializer
 
 # # Fund Views
 # class FundListView(generics.ListCreateAPIView):

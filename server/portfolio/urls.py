@@ -3,7 +3,7 @@ from .views import *
 
 urlpatterns = [
     path("portfolio-managers/", PortfolioManagerListView.as_view(), name="portfolio-managers-list"),
-    # path("portfolio-managers/<int:pk>/", PortfolioManagerDetailView.as_view(), name="portfolio-managers-detail"),
+    path("portfolio-managers/<int:pk>/", PortfolioManagerDetailView.as_view(), name="portfolio-managers-detail"),
 
     # path("funds/", FundListView.as_view(), name="funds-list"),
     # path("funds/<int:pk>/", FundDetailView.as_view(), name="funds-detail"),
