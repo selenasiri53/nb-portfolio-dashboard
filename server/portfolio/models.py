@@ -27,6 +27,7 @@ class Holding(models.Model):
     shares = models.PositiveIntegerField()
     purchase_price = models.FloatField()
     purchase_date = models.DateField()
+    logo_url = models.URLField(blank=True, null=True)
 
     def __str__(self):
         return f"{self.ticker_symbol} ({self.fund.name})"
