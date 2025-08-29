@@ -26,6 +26,9 @@ $ python manage.py runserver
     "http://localhost:5173",  # Vite default port
   ] 
 ```
+# Seed Django DB:
+python manage.py seed portfolio --number=10
+<!-- python manage.py seed <app name> --number=<amount> -->
 
 # Connecting with the frontend:
 In the client folder:

@@ -32,7 +32,9 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'portfolio', # new
-    'rest_framework', # new
+    'rest_framework',
+    'django_seed', # new
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
