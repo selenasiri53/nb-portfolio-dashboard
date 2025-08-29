@@ -1,34 +1,19 @@
 import Table from '@mui/joy/Table';
-import { useState } from 'react';
+import { useFunds } from '../../hooks/useFunds'; // new - tanstack logic extracted here
+import type { Fund } from '../../types/api';
 import { Eye } from 'lucide-react';
 
-type Fund = {
-  fund_id: string; 
-  name: string;
-  strategy: string;
-  manager: string;
-  inception_date: string;
-}
-
-// new React + Tanstack
-import { useFunds } from '../../hooks/useFunds';
 
 export default function TableHover() {
   console.log('hhhhhhh')
-  const { data: funds, isLoading, error } = useFunds()
-
-  const [selected, setSelected] = useState<string[]>([]);
-
-  const toggleSelect = (fundName: string) => {
-    setSelected((prev) =>
-      prev.includes(fundName) ? prev.filter((f) => f !== fundName) : [...prev, fundName]
-    );
-  };
+  const { data, isLoading, error } = useFunds()
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error fetching funds</div>;
-  if (!funds || funds.length === 0) return <div>No funds available</div>
-  console.log(JSON.stringify(funds))
+  if (!data || data.length === 0) return <div>No data available</div>
+  console.log(JSON.stringify(data))
+
+  const funds = data as Fund[]
 
   return (
     <Table className="bg-white overflow-scroll">
@@ -36,31 +21,25 @@ export default function TableHover() {
         <tr>
           <th style={{ width: '40%' }}>Fund</th>
           <th  style={{ width: '20%' }}>Strategy</th>
-          <th  style={{ width: '20%' }}>Manager</th>
-          <th  style={{ width: '20%' }}>Inception Date</th>
+          {/* <th  style={{ width: '15%' }}>Manager</th> */}
+          <th  style={{ width: '15%' }}>Inception Date</th>
         </tr>
       </thead>
       <tbody>
-        {funds?.map((fund: Fund) => {
-          const isSelected = selected.includes(fund.fund_id);
+        {funds?.map((fund) => {
 
           return (
             <tr
               key={fund.fund_id}
-              onClick={() => toggleSelect(fund.fund_id)}
               className={`
                 cursor-pointer
                 transition-all
-                ${
-                  isSelected
-                    ? 'bg-teal-100 rounded-2xl' // selected style
-                    : 'hover:bg-teal-50 hover:rounded-2xl' // hover style
-                }
+               
               `}
             >
               <td>{fund.name}</td>
               <td>{fund.strategy}</td>
-              <td>{fund.manager}</td>
+              {/* <td>{fund.manager}</td> */}
               <td>{fund.inception_date}</td>
               <td>
               <a
