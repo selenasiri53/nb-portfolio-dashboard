@@ -1,6 +1,5 @@
 import Table from '@mui/joy/Table';
 import { useState } from 'react';
-import Checkbox from '@mui/joy/Checkbox';
 import { Eye } from 'lucide-react';
 
 function createData(fund: string, strategy: string, fundReturn: string) {

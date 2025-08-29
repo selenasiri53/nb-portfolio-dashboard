@@ -1,7 +1,8 @@
 import DashboardLayout from "../components/DashboardLayout";
-import DuoCardSection from "../components/DuoCardSection";
-import LineChartComponent from "../components/LineChartComponent";
+import LineChartSection from "../components/sections/LineChartSection";
+import PieSection from "../components/sections/PieSection";
 import TrioCardSection from "../components/TrioCardSection";
+import FundsTableSection from "../components/sections/FundsTableSection";
 
 const Home = () => {
   return (
@@ -13,8 +14,12 @@ const Home = () => {
           </h3>
           <div className="space-y-3">
             <TrioCardSection />
-            <DuoCardSection />
-            <LineChartComponent />
+            <div className="lg:grid lg:grid-cols-3 gap-4">
+              <PieSection />
+              <FundsTableSection />
+            </div>
+            
+            <LineChartSection />
           </div>
         </div>
     </DashboardLayout>

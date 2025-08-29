@@ -20,7 +20,7 @@ import {
     Legend
   );
   
-  const LineChartComponent = () => {
+  const LineChartSection = () => {
     const data = {
       labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
       datasets: [
@@ -91,4 +91,4 @@ import {
     );
   };
   
-  export default LineChartComponent;
+  export default LineChartSection;
