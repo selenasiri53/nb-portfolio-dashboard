@@ -1,10 +1,11 @@
 # Server Setup:
 $ mkdir server && cd server
+
 $ python3 -m venv venv
 $ source venv/bin/activate
 $ pip install django djangorestframework django-cors-headers
 $ django-admin startproject server .
-$ python manage.py startapp api
+$ python manage.py startapp portfolio
 $ python manage.py migrate
 $ python manage.py runserver
 
