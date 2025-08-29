@@ -2,54 +2,59 @@ import Table from '@mui/joy/Table';
 import { useState } from 'react';
 import { Eye } from 'lucide-react';
 
-function createData(fund: string, strategy: string, fundReturn: string) {
-  return { fund, strategy, fundReturn };
+type Fund = {
+  fund_id: string; 
+  name: string;
+  strategy: string;
+  manager: string;
+  inception_date: string;
 }
 
-const rows = [
-  createData('Tech Growth Fund', 'Focus on Tech', '5.00%'),
-  createData('Safe Bonds Fund', 'Government Bonds', '3.50%'),
-  createData('Sales Fund', 'Revenue Growth', '4.20%'),
-  createData('Energy Fund', 'Focus on Energy', '6.10%'),
-  createData('Healthcare Fund', 'Healthcare Sector', '4.75%'),
-  createData('Tech Growth Fund', 'Focus on Tech', '5.00%'),
-  createData('Safe Bonds Fund', 'Government Bonds', '3.50%'),
-  createData('Sales Fund', 'Revenue Growth', '4.20%'),
-  createData('Energy Fund', 'Focus on Energy', '6.10%'),
-  createData('Healthcare Fund', 'Healthcare Sector', '4.75%'),
-  createData('Tech Growth Fund', 'Focus on Tech', '5.00%'),
-  createData('Safe Bonds Fund', 'Government Bonds', '3.50%'),
-  createData('Sales Fund', 'Revenue Growth', '4.20%'),
-  createData('Energy Fund', 'Focus on Energy', '6.10%'),
-  createData('Healthcare Fund', 'Healthcare Sector', '4.75%'),
-];
+// new React + Tanstack
+import { useQuery } from '@tanstack/react-query'
+
+const fetchFunds = async () => {
+  const res = await fetch('localhost:8000/portfolio/funds');
+  if (!res.ok) throw new Error('Network response was not ok');
+  return res.json(); 
+};
 
 export default function TableHover() {
+  const { data: funds, isLoading, error } = useQuery<Fund[], Error>({
+    queryKey: ['funds'],
+    queryFn: fetchFunds,
+  });
+
   const [selected, setSelected] = useState<string[]>([]);
 
-  const toggleSelect = (fund: string) => {
+  const toggleSelect = (fundName: string) => {
     setSelected((prev) =>
-      prev.includes(fund) ? prev.filter((f) => f !== fund) : [...prev, fund]
+      prev.includes(fundName) ? prev.filter((f) => f !== fundName) : [...prev, fundName]
     );
   };
+
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>Error fetching funds</div>;
+  if (!funds || funds.length === 0) return <div>No funds available</div>
 
   return (
     <Table className="bg-white overflow-scroll">
       <thead>
         <tr>
-          <th style={{ width: '50%' }}>Fund</th>
-          <th  style={{ width: '25%' }}>Strategy</th>
-          <th  style={{ width: '20%' }}>Return</th>
+          <th style={{ width: '40%' }}>Fund</th>
+          <th  style={{ width: '20%' }}>Strategy</th>
+          <th  style={{ width: '20%' }}>Manager</th>
+          <th  style={{ width: '20%' }}>Inception Date</th>
         </tr>
       </thead>
       <tbody>
-        {rows.map((row) => {
-          const isSelected = selected.includes(row.fund);
+        {funds?.map((fund: Fund) => {
+          const isSelected = selected.includes(fund.fund_id);
 
           return (
             <tr
-              key={row.fund}
-              onClick={() => toggleSelect(row.fund)}
+              key={fund.fund_id}
+              onClick={() => toggleSelect(fund.fund_id)}
               className={`
                 cursor-pointer
                 transition-all
@@ -60,12 +65,14 @@ export default function TableHover() {
                 }
               `}
             >
-              <td>{row.fund}</td>
-              <td>{row.strategy}</td>
-              <td>{row.fundReturn}</td>
+              <td>{fund.name}</td>
+              <td>{fund.strategy}</td>
+              <td>{fund.manager}</td>
+              <td>{fund.inception_date}</td>
               <td>
               <a
                 href="/fund-detail">
+                  {/* href="/fund-detail/${fund.fund_id}" */}
                 <Eye size={18} />
               </a>
               </td>
