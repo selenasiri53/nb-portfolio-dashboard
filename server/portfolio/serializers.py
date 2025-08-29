@@ -15,8 +15,6 @@ class PortfolioManagerSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
 class FundSerializer(serializers.ModelSerializer):
-    holdings = HoldingSerializer(many=True, read_only=True)
-
     class Meta:
         model = Fund
         fields = "__all__"
