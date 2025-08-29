@@ -12,6 +12,16 @@ const rows = [
   createData('Sales Fund', 'Revenue Growth', '4.20%'),
   createData('Energy Fund', 'Focus on Energy', '6.10%'),
   createData('Healthcare Fund', 'Healthcare Sector', '4.75%'),
+  createData('Tech Growth Fund', 'Focus on Tech', '5.00%'),
+  createData('Safe Bonds Fund', 'Government Bonds', '3.50%'),
+  createData('Sales Fund', 'Revenue Growth', '4.20%'),
+  createData('Energy Fund', 'Focus on Energy', '6.10%'),
+  createData('Healthcare Fund', 'Healthcare Sector', '4.75%'),
+  createData('Tech Growth Fund', 'Focus on Tech', '5.00%'),
+  createData('Safe Bonds Fund', 'Government Bonds', '3.50%'),
+  createData('Sales Fund', 'Revenue Growth', '4.20%'),
+  createData('Energy Fund', 'Focus on Energy', '6.10%'),
+  createData('Healthcare Fund', 'Healthcare Sector', '4.75%'),
 ];
 
 export default function TableHover() {
@@ -24,12 +34,12 @@ export default function TableHover() {
   };
 
   return (
-    <Table className="bg-white">
+    <Table className="bg-white overflow-scroll">
       <thead>
         <tr>
-          <th style={{ width: '48%' }}>Fund</th>
-          <th>Strategy</th>
-          <th>Return</th>
+          <th style={{ width: '50%' }}>Fund</th>
+          <th  style={{ width: '25%' }}>Strategy</th>
+          <th  style={{ width: '20%' }}>Return</th>
         </tr>
       </thead>
       <tbody>
@@ -54,7 +64,10 @@ export default function TableHover() {
               <td>{row.strategy}</td>
               <td>{row.fundReturn}</td>
               <td>
+              <a
+                href="/fund-detail">
                 <Eye size={18} />
+              </a>
               </td>
             </tr>
           );

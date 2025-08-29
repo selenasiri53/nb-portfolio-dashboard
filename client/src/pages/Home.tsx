@@ -14,12 +14,13 @@ const Home = () => {
           </h3>
           <div className="space-y-3">
             <TrioCardSection />
-            <div className="lg:grid lg:grid-cols-3 gap-4">
-              <PieSection />
-              <FundsTableSection />
-            </div>
-            
             <LineChartSection />
+            <div className="lg:flex gap-4">
+              <PieSection />
+              <div className="h-80 rounded-2xl overflow-y-scroll">
+                <FundsTableSection />
+              </div>
+            </div>
           </div>
         </div>
     </DashboardLayout>
