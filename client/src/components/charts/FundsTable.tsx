@@ -11,19 +11,11 @@ type Fund = {
 }
 
 // new React + Tanstack
-import { useQuery } from '@tanstack/react-query'
-
-const fetchFunds = async () => {
-  const res = await fetch('localhost:8000/portfolio/funds');
-  if (!res.ok) throw new Error('Network response was not ok');
-  return res.json(); 
-};
+import { useFunds } from '../../hooks/useFunds';
 
 export default function TableHover() {
-  const { data: funds, isLoading, error } = useQuery<Fund[], Error>({
-    queryKey: ['funds'],
-    queryFn: fetchFunds,
-  });
+  console.log('hhhhhhh')
+  const { data: funds, isLoading, error } = useFunds()
 
   const [selected, setSelected] = useState<string[]>([]);
 
@@ -36,6 +28,7 @@ export default function TableHover() {
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error fetching funds</div>;
   if (!funds || funds.length === 0) return <div>No funds available</div>
+  console.log(JSON.stringify(funds))
 
   return (
     <Table className="bg-white overflow-scroll">
