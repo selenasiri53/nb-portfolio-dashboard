@@ -6,8 +6,8 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   server: {
     proxy: {
-      "/funds": {
-        target: "http://localhost:5000",
+      "/portfolio": {
+        target: "http://127.0.0.1:8000",
         changeOrigin: true,
         secure: false,
       },

@@ -42,7 +42,7 @@ export default function TableHover() {
               <td>{fund.inception_date}</td>
               <td>
               <a
-                href="/fund-detail">
+                href="/fund/fund:id">
                   {/* href="/fund-detail/${fund.fund_id}" */}
                 <Eye size={18} />
               </a>
