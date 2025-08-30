@@ -6,15 +6,10 @@ import {
     Title,
   } from "chart.js";
   import { Pie } from "react-chartjs-2";
-
-  interface SelectedFundProps {
-    selectedFund: number | null;
-    setSelectedFund: (id: number) => void;
-  }
   
 ChartJS.register(ArcElement, Tooltip, Legend, Title);
 
-const PieSection = ({ selectedFund, setSelectedFund }: SelectedFundProps) => {
+const PieSection = () => {
     const data = {
         labels: ["Apple", "Microsoft", "Amazon", "Tesla", "Google"],
         datasets: [
@@ -34,7 +29,7 @@ const PieSection = ({ selectedFund, setSelectedFund }: SelectedFundProps) => {
         ],
       };
     
-      const options = {
+      const options: any = {
         responsive: true,
         maintainAspectRatio: false,
         plugins: {
@@ -43,14 +38,14 @@ const PieSection = ({ selectedFund, setSelectedFund }: SelectedFundProps) => {
             labels: {
               color: "#fff",
               font: {
-                size: 14,
+                size: 11,
                 family: "Inter, sans-serif",
               },
             },
           },
           title: {
             display: true,
-            text: "Fund Allocation Across Stocks",
+            text: "Fund Allocation",
             color: "#fff",
             font: {
               size: 18,

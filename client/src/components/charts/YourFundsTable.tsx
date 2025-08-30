@@ -3,12 +3,7 @@ import { useFunds } from '../../hooks/useFunds';
 import type { Fund } from '../../types/api';
 import { Eye } from 'lucide-react';
 
-interface SelectedFundProps {
-  selectedFund: number | null;
-  setSelectedFund: (id: number) => void;
-}
-
-export default function YourFundsTable({ selectedFund, setSelectedFund }: SelectedFundProps) {
+export default function YourFundsTable() {
   console.log('hhhhhhh')
   const { data, isLoading, error } = useFunds()
 
@@ -34,12 +29,10 @@ export default function YourFundsTable({ selectedFund, setSelectedFund }: Select
 
           return (
             <tr
-              key={fund.fund_id}
-              onClick={() => setSelectedFund(fund.fund_id)}
+              key={fund.fund_id} 
               className={`
               cursor-pointer
               transition-all
-              ${selectedFund === fund.fund_id ? 'bg-teal-100' : ''}
             `}
             >
               <td>{fund.name}</td>

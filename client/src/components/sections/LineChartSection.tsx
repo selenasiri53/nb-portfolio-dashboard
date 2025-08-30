@@ -38,7 +38,7 @@ import {
       ],
     };
   
-    const options = {
+    const options: any = {
       responsive: true,
       maintainAspectRatio: false,
       plugins: {
@@ -54,7 +54,7 @@ import {
         },
         title: {
           display: true,
-          text: "Monthly Revenue",
+          text: "Peer Performance Comparison",
           color: "#fff",
           font: {
             size: 18,
