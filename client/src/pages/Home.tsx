@@ -14,7 +14,7 @@ const Home = () => {
           <div className="space-y-3">
             <QuadraCardSection />
             <LineChartSection />
-            <div className="lg:flex gap-4">
+            <div className="lg:flex space-y-3 lg:space-y-0 gap-4">
               <PieSection />
               <div className="h-80 rounded-2xl overflow-y-scroll">
                 <FundsTableSection />

@@ -28,9 +28,13 @@ function App() {
 
         <div className="lg:min-h-[88vh] border-[0.5px] border-neutral-500 rounded-4xl">
       <div className="lg:flex">
-        <Navbar />
+        {/* desktop */}
+        <div className="hidden lg:block">
+          <Navbar />
+        </div>
+        
         {/* Content */}
-        <div className="lg:w-full bg-white/15 p-4 py-6 md:px-8 lg:rounded-r-4xl space-y-4">
+        <div className="lg:w-full bg-white/15 rounded-l-4xl lg:rounded-l-none rounded-r-4xl p-2 py-6 md:px-8 lg:rounded-r-4xl space-y-4">
            
         <Routes>
           <Route path="/dashboard" element={<Home />} />

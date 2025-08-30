@@ -4,7 +4,7 @@ const Header = () => {
     <h1 className="text-3xl lg:text-4xl">Hello, <span className="text-indigo-200">welcome</span></h1>
     {/* right side */}
     <div
-          className="w-12 h-12 rounded-full bg-amber-300 flex items-center justify-center text-white cursor-pointer hover:opacity-90 transition text-2xl tracking-wider font-thin"
+          className="w-10 h-10 rounded-full bg-amber-300 flex items-center justify-center text-white cursor-pointer hover:opacity-90 transition text-xl tracking-wider font-thin"
         >
           NB
         </div>

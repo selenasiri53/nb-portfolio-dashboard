@@ -12,7 +12,7 @@ const QuadraCardSection = () => {
   const stockPrices = data as StockPrice[]
 
   return (
-    <div className="lg:grid lg:grid-cols-4 space-x-2">
+    <div className="space-y-2 lg:grid lg:grid-cols-4 lg:space-x-2">
       {stockPrices?.slice(0, 4).map((stockPrice) => (
          <div className='card rounded-2xl p-4 bg-white/30'>
         {/* circular img + title */}

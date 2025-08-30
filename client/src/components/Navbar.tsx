@@ -4,7 +4,7 @@ import Tooltip from "@mui/joy/Tooltip";
 
 const Navbar = () => {
   return (
-    <div className="lg:w-40px lg:px-2 lg:py-4 min-h-[88vh] bg-neutral-100 rounded-l-4xl space-y-4 flex flex-col items-center">
+    <div className="lg:w-40px lg:px-2 lg:py-4 min-h-full bg-neutral-100 rounded-l-4xl space-y-4 flex flex-col items-center">
       {/* Dashboard (Funds) */}
       <Tooltip title="Dashboard" placement="top" variant="soft">
         <Link
