@@ -7,4 +7,3 @@ export type StockPrice = {
     low_price: number;
     volume: number;
 };
-

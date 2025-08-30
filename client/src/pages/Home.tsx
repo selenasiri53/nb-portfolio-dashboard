@@ -1,7 +1,7 @@
 import DashboardLayout from "../components/DashboardLayout";
 import LineChartSection from "../components/sections/LineChartSection";
 import PieSection from "../components/sections/PieSection";
-import TrioCardSection from "../components/TrioCardSection";
+import QuadraCardSection from "../components/QuadraCardSection";
 import FundsTableSection from "../components/sections/FundsTableSection";
 
 const Home = () => {
@@ -13,7 +13,7 @@ const Home = () => {
             Your top stocks increased 12% this week
           </h3>
           <div className="space-y-3">
-            <TrioCardSection />
+            <QuadraCardSection />
             <LineChartSection />
             <div className="lg:flex gap-4">
               <PieSection />

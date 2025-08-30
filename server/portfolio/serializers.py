@@ -15,8 +15,6 @@ class PortfolioManagerSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
 class FundSerializer(serializers.ModelSerializer):
-    manager = serializers.CharField(source='manager.name')
-
     class Meta:
         model = Fund
         fields = "__all__"

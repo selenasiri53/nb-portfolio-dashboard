@@ -1,8 +1,7 @@
 import Table from '@mui/joy/Table';
-import { useFunds } from '../../hooks/useFunds'; // new - tanstack logic extracted here
+import { useFunds } from '../../hooks/useFunds'; 
 import type { Fund } from '../../types/api';
 import { Eye } from 'lucide-react';
-
 
 export default function TableHover() {
   console.log('hhhhhhh')
