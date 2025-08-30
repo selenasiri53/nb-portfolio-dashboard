@@ -1,15 +1,12 @@
-/**
- * the portfolio manager
- */
+import type { Fund } from "./Fund";
+
 export type PortfolioManager = {
-    /**
-     * the unique identifier for the portfolio manager
-     */
-    manager_id: number;
+    id: number;
     name: string;
-    /**
-     * valid email address
-     */
     email: string;
-};
+    phone?: string | null;
+    department?: string | null;
+    funds_managed: number;
+    funds?: Fund[]; // related_name="funds"
+  };
 

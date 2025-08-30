@@ -1,0 +1,2816 @@
+{
+  "managers": [
+    {
+      "id": 10,
+      "funds": [
+        {
+          "fund_id": 16,
+          "holdings": [
+            {
+              "holding_id": 26,
+              "ticker_symbol": "AAPL",
+              "shares": 181,
+              "purchase_price": 220.01,
+              "purchase_date": "2025-03-26",
+              "logo_url": null,
+              "fund": 16
+            },
+            {
+              "holding_id": 27,
+              "ticker_symbol": "MSFT",
+              "shares": 236,
+              "purchase_price": 482.81,
+              "purchase_date": "2024-04-06",
+              "logo_url": null,
+              "fund": 16
+            },
+            {
+              "holding_id": 28,
+              "ticker_symbol": "AMZN",
+              "shares": 310,
+              "purchase_price": 299.05,
+              "purchase_date": "2024-12-09",
+              "logo_url": null,
+              "fund": 16
+            },
+            {
+              "holding_id": 29,
+              "ticker_symbol": "TSLA",
+              "shares": 13,
+              "purchase_price": 235.22,
+              "purchase_date": "2024-11-15",
+              "logo_url": null,
+              "fund": 16
+            },
+            {
+              "holding_id": 30,
+              "ticker_symbol": "GOOG",
+              "shares": 67,
+              "purchase_price": 489.6,
+              "purchase_date": "2025-02-17",
+              "logo_url": null,
+              "fund": 16
+            }
+          ],
+          "performances": [
+            {
+              "performance_id": 26,
+              "date": "2025-03-27",
+              "net_asset_value": 1822415.89,
+              "return_percentage": 12.52,
+              "fund": 16
+            },
+            {
+              "performance_id": 27,
+              "date": "2024-11-19",
+              "net_asset_value": 1859062.18,
+              "return_percentage": -9.88,
+              "fund": 16
+            },
+            {
+              "performance_id": 28,
+              "date": "2025-07-03",
+              "net_asset_value": 3815605.87,
+              "return_percentage": -9.89,
+              "fund": 16
+            },
+            {
+              "performance_id": 29,
+              "date": "2025-06-15",
+              "net_asset_value": 2634078.76,
+              "return_percentage": 14.55,
+              "fund": 16
+            },
+            {
+              "performance_id": 30,
+              "date": "2025-01-29",
+              "net_asset_value": 1049817.77,
+              "return_percentage": 6.59,
+              "fund": 16
+            }
+          ],
+          "name": "Frank-Campbell Growth Fund",
+          "strategy": "Balanced",
+          "inception_date": "2021-03-23",
+          "manager": 10
+        },
+        {
+          "fund_id": 18,
+          "holdings": [
+            {
+              "holding_id": 36,
+              "ticker_symbol": "AAPL",
+              "shares": 52,
+              "purchase_price": 125.98,
+              "purchase_date": "2025-01-19",
+              "logo_url": null,
+              "fund": 18
+            },
+            {
+              "holding_id": 37,
+              "ticker_symbol": "MSFT",
+              "shares": 255,
+              "purchase_price": 463.19,
+              "purchase_date": "2025-04-22",
+              "logo_url": null,
+              "fund": 18
+            },
+            {
+              "holding_id": 38,
+              "ticker_symbol": "AMZN",
+              "shares": 170,
+              "purchase_price": 267.97,
+              "purchase_date": "2024-11-15",
+              "logo_url": null,
+              "fund": 18
+            },
+            {
+              "holding_id": 39,
+              "ticker_symbol": "TSLA",
+              "shares": 395,
+              "purchase_price": 338.43,
+              "purchase_date": "2024-04-20",
+              "logo_url": null,
+              "fund": 18
+            },
+            {
+              "holding_id": 40,
+              "ticker_symbol": "GOOG",
+              "shares": 359,
+              "purchase_price": 52.19,
+              "purchase_date": "2024-02-28",
+              "logo_url": null,
+              "fund": 18
+            }
+          ],
+          "performances": [
+            {
+              "performance_id": 36,
+              "date": "2025-03-12",
+              "net_asset_value": 4348068.12,
+              "return_percentage": 5.42,
+              "fund": 18
+            },
+            {
+              "performance_id": 37,
+              "date": "2025-06-13",
+              "net_asset_value": 4465451.45,
+              "return_percentage": 15.09,
+              "fund": 18
+            },
+            {
+              "performance_id": 38,
+              "date": "2025-05-22",
+              "net_asset_value": 3577960.04,
+              "return_percentage": -7.38,
+              "fund": 18
+            },
+            {
+              "performance_id": 39,
+              "date": "2024-12-26",
+              "net_asset_value": 2454490.93,
+              "return_percentage": -4.9,
+              "fund": 18
+            },
+            {
+              "performance_id": 40,
+              "date": "2025-03-28",
+              "net_asset_value": 1437851.33,
+              "return_percentage": 8.65,
+              "fund": 18
+            }
+          ],
+          "name": "Pearson, Benson and Davis Growth Fund",
+          "strategy": "Balanced",
+          "inception_date": "2024-05-23",
+          "manager": 10
+        }
+      ],
+      "name": "Stephanie Stevens",
+      "email": "marissa20@example.com",
+      "phone": "981.689.0621x3783",
+      "department": "Fixed Income",
+      "funds_managed": 0
+    },
+    {
+      "id": 11,
+      "funds": [],
+      "name": "Deanna Dawson",
+      "email": "allendeanna@example.com",
+      "phone": "(258)437-7960",
+      "department": "Fixed Income",
+      "funds_managed": 0
+    },
+    {
+      "id": 12,
+      "funds": [
+        {
+          "fund_id": 17,
+          "holdings": [
+            {
+              "holding_id": 31,
+              "ticker_symbol": "AAPL",
+              "shares": 187,
+              "purchase_price": 207.7,
+              "purchase_date": "2024-07-17",
+              "logo_url": null,
+              "fund": 17
+            },
+            {
+              "holding_id": 32,
+              "ticker_symbol": "MSFT",
+              "shares": 222,
+              "purchase_price": 245.86,
+              "purchase_date": "2024-12-07",
+              "logo_url": null,
+              "fund": 17
+            },
+            {
+              "holding_id": 33,
+              "ticker_symbol": "AMZN",
+              "shares": 382,
+              "purchase_price": 221.28,
+              "purchase_date": "2024-05-19",
+              "logo_url": null,
+              "fund": 17
+            },
+            {
+              "holding_id": 34,
+              "ticker_symbol": "TSLA",
+              "shares": 395,
+              "purchase_price": 138.72,
+              "purchase_date": "2025-03-29",
+              "logo_url": null,
+              "fund": 17
+            },
+            {
+              "holding_id": 35,
+              "ticker_symbol": "GOOG",
+              "shares": 40,
+              "purchase_price": 403.41,
+              "purchase_date": "2024-11-21",
+              "logo_url": null,
+              "fund": 17
+            }
+          ],
+          "performances": [
+            {
+              "performance_id": 31,
+              "date": "2025-05-20",
+              "net_asset_value": 4804828.06,
+              "return_percentage": 16.53,
+              "fund": 17
+            },
+            {
+              "performance_id": 32,
+              "date": "2025-02-26",
+              "net_asset_value": 1104071.85,
+              "return_percentage": 5.05,
+              "fund": 17
+            },
+            {
+              "performance_id": 33,
+              "date": "2025-01-01",
+              "net_asset_value": 1696148.59,
+              "return_percentage": 7.06,
+              "fund": 17
+            },
+            {
+              "performance_id": 34,
+              "date": "2025-01-10",
+              "net_asset_value": 3768817.56,
+              "return_percentage": -1.44,
+              "fund": 17
+            },
+            {
+              "performance_id": 35,
+              "date": "2025-04-11",
+              "net_asset_value": 1436552.03,
+              "return_percentage": 5.49,
+              "fund": 17
+            }
+          ],
+          "name": "Cabrera-Morales Growth Fund",
+          "strategy": "Balanced",
+          "inception_date": "2025-06-15",
+          "manager": 12
+        },
+        {
+          "fund_id": 19,
+          "holdings": [
+            {
+              "holding_id": 41,
+              "ticker_symbol": "AAPL",
+              "shares": 489,
+              "purchase_price": 74.69,
+              "purchase_date": "2024-05-30",
+              "logo_url": null,
+              "fund": 19
+            },
+            {
+              "holding_id": 42,
+              "ticker_symbol": "MSFT",
+              "shares": 199,
+              "purchase_price": 163.14,
+              "purchase_date": "2024-08-23",
+              "logo_url": null,
+              "fund": 19
+            },
+            {
+              "holding_id": 43,
+              "ticker_symbol": "AMZN",
+              "shares": 169,
+              "purchase_price": 224.25,
+              "purchase_date": "2024-02-24",
+              "logo_url": null,
+              "fund": 19
+            },
+            {
+              "holding_id": 44,
+              "ticker_symbol": "TSLA",
+              "shares": 55,
+              "purchase_price": 455.25,
+              "purchase_date": "2023-11-07",
+              "logo_url": null,
+              "fund": 19
+            },
+            {
+              "holding_id": 45,
+              "ticker_symbol": "GOOG",
+              "shares": 82,
+              "purchase_price": 360.42,
+              "purchase_date": "2025-06-13",
+              "logo_url": null,
+              "fund": 19
+            }
+          ],
+          "performances": [
+            {
+              "performance_id": 41,
+              "date": "2025-03-19",
+              "net_asset_value": 3035205.56,
+              "return_percentage": -8.54,
+              "fund": 19
+            },
+            {
+              "performance_id": 42,
+              "date": "2025-07-29",
+              "net_asset_value": 2313446.5,
+              "return_percentage": -4.9,
+              "fund": 19
+            },
+            {
+              "performance_id": 43,
+              "date": "2025-02-16",
+              "net_asset_value": 1327497.71,
+              "return_percentage": -8.43,
+              "fund": 19
+            },
+            {
+              "performance_id": 44,
+              "date": "2024-10-24",
+              "net_asset_value": 2872337.01,
+              "return_percentage": -2.15,
+              "fund": 19
+            },
+            {
+              "performance_id": 45,
+              "date": "2024-09-29",
+              "net_asset_value": 1409516.86,
+              "return_percentage": 19.65,
+              "fund": 19
+            }
+          ],
+          "name": "Miller-Ramos Growth Fund",
+          "strategy": "Growth",
+          "inception_date": "2024-02-04",
+          "manager": 12
+        },
+        {
+          "fund_id": 20,
+          "holdings": [
+            {
+              "holding_id": 46,
+              "ticker_symbol": "AAPL",
+              "shares": 481,
+              "purchase_price": 66.93,
+              "purchase_date": "2025-03-23",
+              "logo_url": null,
+              "fund": 20
+            },
+            {
+              "holding_id": 47,
+              "ticker_symbol": "MSFT",
+              "shares": 440,
+              "purchase_price": 398.8,
+              "purchase_date": "2024-03-23",
+              "logo_url": null,
+              "fund": 20
+            },
+            {
+              "holding_id": 48,
+              "ticker_symbol": "AMZN",
+              "shares": 162,
+              "purchase_price": 100.3,
+              "purchase_date": "2024-07-19",
+              "logo_url": null,
+              "fund": 20
+            },
+            {
+              "holding_id": 49,
+              "ticker_symbol": "TSLA",
+              "shares": 349,
+              "purchase_price": 102.62,
+              "purchase_date": "2023-09-21",
+              "logo_url": null,
+              "fund": 20
+            },
+            {
+              "holding_id": 50,
+              "ticker_symbol": "GOOG",
+              "shares": 287,
+              "purchase_price": 123.98,
+              "purchase_date": "2023-10-10",
+              "logo_url": null,
+              "fund": 20
+            }
+          ],
+          "performances": [
+            {
+              "performance_id": 46,
+              "date": "2025-05-13",
+              "net_asset_value": 1054082.06,
+              "return_percentage": 17.29,
+              "fund": 20
+            },
+            {
+              "performance_id": 47,
+              "date": "2025-02-06",
+              "net_asset_value": 1417745.57,
+              "return_percentage": 12.06,
+              "fund": 20
+            },
+            {
+              "performance_id": 48,
+              "date": "2025-01-03",
+              "net_asset_value": 1728137.81,
+              "return_percentage": 4.67,
+              "fund": 20
+            },
+            {
+              "performance_id": 49,
+              "date": "2024-10-18",
+              "net_asset_value": 1842740.42,
+              "return_percentage": 12.6,
+              "fund": 20
+            },
+            {
+              "performance_id": 50,
+              "date": "2025-05-01",
+              "net_asset_value": 2854831.28,
+              "return_percentage": 0.28,
+              "fund": 20
+            }
+          ],
+          "name": "Cannon Inc Growth Fund",
+          "strategy": "Growth",
+          "inception_date": "2024-06-22",
+          "manager": 12
+        }
+      ],
+      "name": "Jordan Avery",
+      "email": "michelle82@example.com",
+      "phone": "(533)608-3040",
+      "department": "Multi-Asset",
+      "funds_managed": 0
+    }
+  ],
+  "funds": [
+    {
+      "fund_id": 16,
+      "holdings": [
+        {
+          "holding_id": 26,
+          "ticker_symbol": "AAPL",
+          "shares": 181,
+          "purchase_price": 220.01,
+          "purchase_date": "2025-03-26",
+          "logo_url": null,
+          "fund": 16
+        },
+        {
+          "holding_id": 27,
+          "ticker_symbol": "MSFT",
+          "shares": 236,
+          "purchase_price": 482.81,
+          "purchase_date": "2024-04-06",
+          "logo_url": null,
+          "fund": 16
+        },
+        {
+          "holding_id": 28,
+          "ticker_symbol": "AMZN",
+          "shares": 310,
+          "purchase_price": 299.05,
+          "purchase_date": "2024-12-09",
+          "logo_url": null,
+          "fund": 16
+        },
+        {
+          "holding_id": 29,
+          "ticker_symbol": "TSLA",
+          "shares": 13,
+          "purchase_price": 235.22,
+          "purchase_date": "2024-11-15",
+          "logo_url": null,
+          "fund": 16
+        },
+        {
+          "holding_id": 30,
+          "ticker_symbol": "GOOG",
+          "shares": 67,
+          "purchase_price": 489.6,
+          "purchase_date": "2025-02-17",
+          "logo_url": null,
+          "fund": 16
+        }
+      ],
+      "performances": [
+        {
+          "performance_id": 26,
+          "date": "2025-03-27",
+          "net_asset_value": 1822415.89,
+          "return_percentage": 12.52,
+          "fund": 16
+        },
+        {
+          "performance_id": 27,
+          "date": "2024-11-19",
+          "net_asset_value": 1859062.18,
+          "return_percentage": -9.88,
+          "fund": 16
+        },
+        {
+          "performance_id": 28,
+          "date": "2025-07-03",
+          "net_asset_value": 3815605.87,
+          "return_percentage": -9.89,
+          "fund": 16
+        },
+        {
+          "performance_id": 29,
+          "date": "2025-06-15",
+          "net_asset_value": 2634078.76,
+          "return_percentage": 14.55,
+          "fund": 16
+        },
+        {
+          "performance_id": 30,
+          "date": "2025-01-29",
+          "net_asset_value": 1049817.77,
+          "return_percentage": 6.59,
+          "fund": 16
+        }
+      ],
+      "name": "Frank-Campbell Growth Fund",
+      "strategy": "Balanced",
+      "inception_date": "2021-03-23",
+      "manager": 10
+    },
+    {
+      "fund_id": 17,
+      "holdings": [
+        {
+          "holding_id": 31,
+          "ticker_symbol": "AAPL",
+          "shares": 187,
+          "purchase_price": 207.7,
+          "purchase_date": "2024-07-17",
+          "logo_url": null,
+          "fund": 17
+        },
+        {
+          "holding_id": 32,
+          "ticker_symbol": "MSFT",
+          "shares": 222,
+          "purchase_price": 245.86,
+          "purchase_date": "2024-12-07",
+          "logo_url": null,
+          "fund": 17
+        },
+        {
+          "holding_id": 33,
+          "ticker_symbol": "AMZN",
+          "shares": 382,
+          "purchase_price": 221.28,
+          "purchase_date": "2024-05-19",
+          "logo_url": null,
+          "fund": 17
+        },
+        {
+          "holding_id": 34,
+          "ticker_symbol": "TSLA",
+          "shares": 395,
+          "purchase_price": 138.72,
+          "purchase_date": "2025-03-29",
+          "logo_url": null,
+          "fund": 17
+        },
+        {
+          "holding_id": 35,
+          "ticker_symbol": "GOOG",
+          "shares": 40,
+          "purchase_price": 403.41,
+          "purchase_date": "2024-11-21",
+          "logo_url": null,
+          "fund": 17
+        }
+      ],
+      "performances": [
+        {
+          "performance_id": 31,
+          "date": "2025-05-20",
+          "net_asset_value": 4804828.06,
+          "return_percentage": 16.53,
+          "fund": 17
+        },
+        {
+          "performance_id": 32,
+          "date": "2025-02-26",
+          "net_asset_value": 1104071.85,
+          "return_percentage": 5.05,
+          "fund": 17
+        },
+        {
+          "performance_id": 33,
+          "date": "2025-01-01",
+          "net_asset_value": 1696148.59,
+          "return_percentage": 7.06,
+          "fund": 17
+        },
+        {
+          "performance_id": 34,
+          "date": "2025-01-10",
+          "net_asset_value": 3768817.56,
+          "return_percentage": -1.44,
+          "fund": 17
+        },
+        {
+          "performance_id": 35,
+          "date": "2025-04-11",
+          "net_asset_value": 1436552.03,
+          "return_percentage": 5.49,
+          "fund": 17
+        }
+      ],
+      "name": "Cabrera-Morales Growth Fund",
+      "strategy": "Balanced",
+      "inception_date": "2025-06-15",
+      "manager": 12
+    },
+    {
+      "fund_id": 18,
+      "holdings": [
+        {
+          "holding_id": 36,
+          "ticker_symbol": "AAPL",
+          "shares": 52,
+          "purchase_price": 125.98,
+          "purchase_date": "2025-01-19",
+          "logo_url": null,
+          "fund": 18
+        },
+        {
+          "holding_id": 37,
+          "ticker_symbol": "MSFT",
+          "shares": 255,
+          "purchase_price": 463.19,
+          "purchase_date": "2025-04-22",
+          "logo_url": null,
+          "fund": 18
+        },
+        {
+          "holding_id": 38,
+          "ticker_symbol": "AMZN",
+          "shares": 170,
+          "purchase_price": 267.97,
+          "purchase_date": "2024-11-15",
+          "logo_url": null,
+          "fund": 18
+        },
+        {
+          "holding_id": 39,
+          "ticker_symbol": "TSLA",
+          "shares": 395,
+          "purchase_price": 338.43,
+          "purchase_date": "2024-04-20",
+          "logo_url": null,
+          "fund": 18
+        },
+        {
+          "holding_id": 40,
+          "ticker_symbol": "GOOG",
+          "shares": 359,
+          "purchase_price": 52.19,
+          "purchase_date": "2024-02-28",
+          "logo_url": null,
+          "fund": 18
+        }
+      ],
+      "performances": [
+        {
+          "performance_id": 36,
+          "date": "2025-03-12",
+          "net_asset_value": 4348068.12,
+          "return_percentage": 5.42,
+          "fund": 18
+        },
+        {
+          "performance_id": 37,
+          "date": "2025-06-13",
+          "net_asset_value": 4465451.45,
+          "return_percentage": 15.09,
+          "fund": 18
+        },
+        {
+          "performance_id": 38,
+          "date": "2025-05-22",
+          "net_asset_value": 3577960.04,
+          "return_percentage": -7.38,
+          "fund": 18
+        },
+        {
+          "performance_id": 39,
+          "date": "2024-12-26",
+          "net_asset_value": 2454490.93,
+          "return_percentage": -4.9,
+          "fund": 18
+        },
+        {
+          "performance_id": 40,
+          "date": "2025-03-28",
+          "net_asset_value": 1437851.33,
+          "return_percentage": 8.65,
+          "fund": 18
+        }
+      ],
+      "name": "Pearson, Benson and Davis Growth Fund",
+      "strategy": "Balanced",
+      "inception_date": "2024-05-23",
+      "manager": 10
+    },
+    {
+      "fund_id": 19,
+      "holdings": [
+        {
+          "holding_id": 41,
+          "ticker_symbol": "AAPL",
+          "shares": 489,
+          "purchase_price": 74.69,
+          "purchase_date": "2024-05-30",
+          "logo_url": null,
+          "fund": 19
+        },
+        {
+          "holding_id": 42,
+          "ticker_symbol": "MSFT",
+          "shares": 199,
+          "purchase_price": 163.14,
+          "purchase_date": "2024-08-23",
+          "logo_url": null,
+          "fund": 19
+        },
+        {
+          "holding_id": 43,
+          "ticker_symbol": "AMZN",
+          "shares": 169,
+          "purchase_price": 224.25,
+          "purchase_date": "2024-02-24",
+          "logo_url": null,
+          "fund": 19
+        },
+        {
+          "holding_id": 44,
+          "ticker_symbol": "TSLA",
+          "shares": 55,
+          "purchase_price": 455.25,
+          "purchase_date": "2023-11-07",
+          "logo_url": null,
+          "fund": 19
+        },
+        {
+          "holding_id": 45,
+          "ticker_symbol": "GOOG",
+          "shares": 82,
+          "purchase_price": 360.42,
+          "purchase_date": "2025-06-13",
+          "logo_url": null,
+          "fund": 19
+        }
+      ],
+      "performances": [
+        {
+          "performance_id": 41,
+          "date": "2025-03-19",
+          "net_asset_value": 3035205.56,
+          "return_percentage": -8.54,
+          "fund": 19
+        },
+        {
+          "performance_id": 42,
+          "date": "2025-07-29",
+          "net_asset_value": 2313446.5,
+          "return_percentage": -4.9,
+          "fund": 19
+        },
+        {
+          "performance_id": 43,
+          "date": "2025-02-16",
+          "net_asset_value": 1327497.71,
+          "return_percentage": -8.43,
+          "fund": 19
+        },
+        {
+          "performance_id": 44,
+          "date": "2024-10-24",
+          "net_asset_value": 2872337.01,
+          "return_percentage": -2.15,
+          "fund": 19
+        },
+        {
+          "performance_id": 45,
+          "date": "2024-09-29",
+          "net_asset_value": 1409516.86,
+          "return_percentage": 19.65,
+          "fund": 19
+        }
+      ],
+      "name": "Miller-Ramos Growth Fund",
+      "strategy": "Growth",
+      "inception_date": "2024-02-04",
+      "manager": 12
+    },
+    {
+      "fund_id": 20,
+      "holdings": [
+        {
+          "holding_id": 46,
+          "ticker_symbol": "AAPL",
+          "shares": 481,
+          "purchase_price": 66.93,
+          "purchase_date": "2025-03-23",
+          "logo_url": null,
+          "fund": 20
+        },
+        {
+          "holding_id": 47,
+          "ticker_symbol": "MSFT",
+          "shares": 440,
+          "purchase_price": 398.8,
+          "purchase_date": "2024-03-23",
+          "logo_url": null,
+          "fund": 20
+        },
+        {
+          "holding_id": 48,
+          "ticker_symbol": "AMZN",
+          "shares": 162,
+          "purchase_price": 100.3,
+          "purchase_date": "2024-07-19",
+          "logo_url": null,
+          "fund": 20
+        },
+        {
+          "holding_id": 49,
+          "ticker_symbol": "TSLA",
+          "shares": 349,
+          "purchase_price": 102.62,
+          "purchase_date": "2023-09-21",
+          "logo_url": null,
+          "fund": 20
+        },
+        {
+          "holding_id": 50,
+          "ticker_symbol": "GOOG",
+          "shares": 287,
+          "purchase_price": 123.98,
+          "purchase_date": "2023-10-10",
+          "logo_url": null,
+          "fund": 20
+        }
+      ],
+      "performances": [
+        {
+          "performance_id": 46,
+          "date": "2025-05-13",
+          "net_asset_value": 1054082.06,
+          "return_percentage": 17.29,
+          "fund": 20
+        },
+        {
+          "performance_id": 47,
+          "date": "2025-02-06",
+          "net_asset_value": 1417745.57,
+          "return_percentage": 12.06,
+          "fund": 20
+        },
+        {
+          "performance_id": 48,
+          "date": "2025-01-03",
+          "net_asset_value": 1728137.81,
+          "return_percentage": 4.67,
+          "fund": 20
+        },
+        {
+          "performance_id": 49,
+          "date": "2024-10-18",
+          "net_asset_value": 1842740.42,
+          "return_percentage": 12.6,
+          "fund": 20
+        },
+        {
+          "performance_id": 50,
+          "date": "2025-05-01",
+          "net_asset_value": 2854831.28,
+          "return_percentage": 0.28,
+          "fund": 20
+        }
+      ],
+      "name": "Cannon Inc Growth Fund",
+      "strategy": "Growth",
+      "inception_date": "2024-06-22",
+      "manager": 12
+    }
+  ],
+  "holdings": [
+    {
+      "holding_id": 26,
+      "ticker_symbol": "AAPL",
+      "shares": 181,
+      "purchase_price": 220.01,
+      "purchase_date": "2025-03-26",
+      "logo_url": null,
+      "fund": 16
+    },
+    {
+      "holding_id": 27,
+      "ticker_symbol": "MSFT",
+      "shares": 236,
+      "purchase_price": 482.81,
+      "purchase_date": "2024-04-06",
+      "logo_url": null,
+      "fund": 16
+    },
+    {
+      "holding_id": 28,
+      "ticker_symbol": "AMZN",
+      "shares": 310,
+      "purchase_price": 299.05,
+      "purchase_date": "2024-12-09",
+      "logo_url": null,
+      "fund": 16
+    },
+    {
+      "holding_id": 29,
+      "ticker_symbol": "TSLA",
+      "shares": 13,
+      "purchase_price": 235.22,
+      "purchase_date": "2024-11-15",
+      "logo_url": null,
+      "fund": 16
+    },
+    {
+      "holding_id": 30,
+      "ticker_symbol": "GOOG",
+      "shares": 67,
+      "purchase_price": 489.6,
+      "purchase_date": "2025-02-17",
+      "logo_url": null,
+      "fund": 16
+    },
+    {
+      "holding_id": 31,
+      "ticker_symbol": "AAPL",
+      "shares": 187,
+      "purchase_price": 207.7,
+      "purchase_date": "2024-07-17",
+      "logo_url": null,
+      "fund": 17
+    },
+    {
+      "holding_id": 32,
+      "ticker_symbol": "MSFT",
+      "shares": 222,
+      "purchase_price": 245.86,
+      "purchase_date": "2024-12-07",
+      "logo_url": null,
+      "fund": 17
+    },
+    {
+      "holding_id": 33,
+      "ticker_symbol": "AMZN",
+      "shares": 382,
+      "purchase_price": 221.28,
+      "purchase_date": "2024-05-19",
+      "logo_url": null,
+      "fund": 17
+    },
+    {
+      "holding_id": 34,
+      "ticker_symbol": "TSLA",
+      "shares": 395,
+      "purchase_price": 138.72,
+      "purchase_date": "2025-03-29",
+      "logo_url": null,
+      "fund": 17
+    },
+    {
+      "holding_id": 35,
+      "ticker_symbol": "GOOG",
+      "shares": 40,
+      "purchase_price": 403.41,
+      "purchase_date": "2024-11-21",
+      "logo_url": null,
+      "fund": 17
+    },
+    {
+      "holding_id": 36,
+      "ticker_symbol": "AAPL",
+      "shares": 52,
+      "purchase_price": 125.98,
+      "purchase_date": "2025-01-19",
+      "logo_url": null,
+      "fund": 18
+    },
+    {
+      "holding_id": 37,
+      "ticker_symbol": "MSFT",
+      "shares": 255,
+      "purchase_price": 463.19,
+      "purchase_date": "2025-04-22",
+      "logo_url": null,
+      "fund": 18
+    },
+    {
+      "holding_id": 38,
+      "ticker_symbol": "AMZN",
+      "shares": 170,
+      "purchase_price": 267.97,
+      "purchase_date": "2024-11-15",
+      "logo_url": null,
+      "fund": 18
+    },
+    {
+      "holding_id": 39,
+      "ticker_symbol": "TSLA",
+      "shares": 395,
+      "purchase_price": 338.43,
+      "purchase_date": "2024-04-20",
+      "logo_url": null,
+      "fund": 18
+    },
+    {
+      "holding_id": 40,
+      "ticker_symbol": "GOOG",
+      "shares": 359,
+      "purchase_price": 52.19,
+      "purchase_date": "2024-02-28",
+      "logo_url": null,
+      "fund": 18
+    },
+    {
+      "holding_id": 41,
+      "ticker_symbol": "AAPL",
+      "shares": 489,
+      "purchase_price": 74.69,
+      "purchase_date": "2024-05-30",
+      "logo_url": null,
+      "fund": 19
+    },
+    {
+      "holding_id": 42,
+      "ticker_symbol": "MSFT",
+      "shares": 199,
+      "purchase_price": 163.14,
+      "purchase_date": "2024-08-23",
+      "logo_url": null,
+      "fund": 19
+    },
+    {
+      "holding_id": 43,
+      "ticker_symbol": "AMZN",
+      "shares": 169,
+      "purchase_price": 224.25,
+      "purchase_date": "2024-02-24",
+      "logo_url": null,
+      "fund": 19
+    },
+    {
+      "holding_id": 44,
+      "ticker_symbol": "TSLA",
+      "shares": 55,
+      "purchase_price": 455.25,
+      "purchase_date": "2023-11-07",
+      "logo_url": null,
+      "fund": 19
+    },
+    {
+      "holding_id": 45,
+      "ticker_symbol": "GOOG",
+      "shares": 82,
+      "purchase_price": 360.42,
+      "purchase_date": "2025-06-13",
+      "logo_url": null,
+      "fund": 19
+    },
+    {
+      "holding_id": 46,
+      "ticker_symbol": "AAPL",
+      "shares": 481,
+      "purchase_price": 66.93,
+      "purchase_date": "2025-03-23",
+      "logo_url": null,
+      "fund": 20
+    },
+    {
+      "holding_id": 47,
+      "ticker_symbol": "MSFT",
+      "shares": 440,
+      "purchase_price": 398.8,
+      "purchase_date": "2024-03-23",
+      "logo_url": null,
+      "fund": 20
+    },
+    {
+      "holding_id": 48,
+      "ticker_symbol": "AMZN",
+      "shares": 162,
+      "purchase_price": 100.3,
+      "purchase_date": "2024-07-19",
+      "logo_url": null,
+      "fund": 20
+    },
+    {
+      "holding_id": 49,
+      "ticker_symbol": "TSLA",
+      "shares": 349,
+      "purchase_price": 102.62,
+      "purchase_date": "2023-09-21",
+      "logo_url": null,
+      "fund": 20
+    },
+    {
+      "holding_id": 50,
+      "ticker_symbol": "GOOG",
+      "shares": 287,
+      "purchase_price": 123.98,
+      "purchase_date": "2023-10-10",
+      "logo_url": null,
+      "fund": 20
+    }
+  ],
+  "stock_prices": [
+    {
+      "id": 123,
+      "ticker_symbol": "AAPL",
+      "date": "2025-04-08",
+      "open_price": 274.06,
+      "close_price": 97.35,
+      "high_price": 140.7,
+      "low_price": 182.66,
+      "volume": 326795
+    },
+    {
+      "id": 124,
+      "ticker_symbol": "AAPL",
+      "date": "2025-01-28",
+      "open_price": 264.6,
+      "close_price": 490.51,
+      "high_price": 266.3,
+      "low_price": 425.45,
+      "volume": 176378
+    },
+    {
+      "id": 125,
+      "ticker_symbol": "AAPL",
+      "date": "2025-07-08",
+      "open_price": 276.72,
+      "close_price": 250.43,
+      "high_price": 352.18,
+      "low_price": 155.1,
+      "volume": 680020
+    },
+    {
+      "id": 126,
+      "ticker_symbol": "AAPL",
+      "date": "2024-10-31",
+      "open_price": 471.73,
+      "close_price": 242.85,
+      "high_price": 220.34,
+      "low_price": 278.44,
+      "volume": 801979
+    },
+    {
+      "id": 127,
+      "ticker_symbol": "AAPL",
+      "date": "2024-12-11",
+      "open_price": 76.73,
+      "close_price": 398.15,
+      "high_price": 456.75,
+      "low_price": 101.06,
+      "volume": 369429
+    },
+    {
+      "id": 128,
+      "ticker_symbol": "MSFT",
+      "date": "2025-05-30",
+      "open_price": 244.6,
+      "close_price": 74.75,
+      "high_price": 185.48,
+      "low_price": 61.83,
+      "volume": 629376
+    },
+    {
+      "id": 129,
+      "ticker_symbol": "MSFT",
+      "date": "2025-08-04",
+      "open_price": 493.07,
+      "close_price": 227.16,
+      "high_price": 243.38,
+      "low_price": 465.62,
+      "volume": 147025
+    },
+    {
+      "id": 130,
+      "ticker_symbol": "MSFT",
+      "date": "2025-02-23",
+      "open_price": 404.06,
+      "close_price": 477.18,
+      "high_price": 181.05,
+      "low_price": 439.89,
+      "volume": 61367
+    },
+    {
+      "id": 131,
+      "ticker_symbol": "MSFT",
+      "date": "2025-04-17",
+      "open_price": 245.81,
+      "close_price": 216.51,
+      "high_price": 88.63,
+      "low_price": 186.64,
+      "volume": 652345
+    },
+    {
+      "id": 132,
+      "ticker_symbol": "MSFT",
+      "date": "2024-09-13",
+      "open_price": 385.22,
+      "close_price": 221,
+      "high_price": 196.69,
+      "low_price": 105.26,
+      "volume": 724690
+    },
+    {
+      "id": 133,
+      "ticker_symbol": "AMZN",
+      "date": "2024-11-12",
+      "open_price": 65.26,
+      "close_price": 438.3,
+      "high_price": 53.18,
+      "low_price": 226.09,
+      "volume": 334496
+    },
+    {
+      "id": 134,
+      "ticker_symbol": "AMZN",
+      "date": "2025-02-19",
+      "open_price": 322,
+      "close_price": 459.62,
+      "high_price": 279.47,
+      "low_price": 350.91,
+      "volume": 654941
+    },
+    {
+      "id": 135,
+      "ticker_symbol": "AMZN",
+      "date": "2025-07-15",
+      "open_price": 469.9,
+      "close_price": 447.11,
+      "high_price": 347.39,
+      "low_price": 206.65,
+      "volume": 744706
+    },
+    {
+      "id": 136,
+      "ticker_symbol": "AMZN",
+      "date": "2025-06-29",
+      "open_price": 194.35,
+      "close_price": 201.06,
+      "high_price": 266.37,
+      "low_price": 362.41,
+      "volume": 674965
+    },
+    {
+      "id": 137,
+      "ticker_symbol": "AMZN",
+      "date": "2025-06-20",
+      "open_price": 155.01,
+      "close_price": 324.73,
+      "high_price": 389.86,
+      "low_price": 265.51,
+      "volume": 607480
+    },
+    {
+      "id": 138,
+      "ticker_symbol": "TSLA",
+      "date": "2025-05-18",
+      "open_price": 304.17,
+      "close_price": 348.41,
+      "high_price": 472.39,
+      "low_price": 197.48,
+      "volume": 765140
+    },
+    {
+      "id": 139,
+      "ticker_symbol": "TSLA",
+      "date": "2025-07-31",
+      "open_price": 246.12,
+      "close_price": 160.75,
+      "high_price": 87.26,
+      "low_price": 57.52,
+      "volume": 489504
+    },
+    {
+      "id": 140,
+      "ticker_symbol": "TSLA",
+      "date": "2025-07-09",
+      "open_price": 184.42,
+      "close_price": 115.7,
+      "high_price": 121.36,
+      "low_price": 240.13,
+      "volume": 52188
+    },
+    {
+      "id": 141,
+      "ticker_symbol": "TSLA",
+      "date": "2025-08-08",
+      "open_price": 129.42,
+      "close_price": 355.03,
+      "high_price": 124.24,
+      "low_price": 167.01,
+      "volume": 77013
+    },
+    {
+      "id": 142,
+      "ticker_symbol": "TSLA",
+      "date": "2025-06-28",
+      "open_price": 96.86,
+      "close_price": 66.32,
+      "high_price": 66.99,
+      "low_price": 95.34,
+      "volume": 297357
+    },
+    {
+      "id": 143,
+      "ticker_symbol": "GOOG",
+      "date": "2024-09-01",
+      "open_price": 189.39,
+      "close_price": 84.12,
+      "high_price": 171.81,
+      "low_price": 392.01,
+      "volume": 999776
+    },
+    {
+      "id": 144,
+      "ticker_symbol": "GOOG",
+      "date": "2024-11-19",
+      "open_price": 450.55,
+      "close_price": 296.68,
+      "high_price": 236.38,
+      "low_price": 194.23,
+      "volume": 193448
+    },
+    {
+      "id": 145,
+      "ticker_symbol": "GOOG",
+      "date": "2024-10-21",
+      "open_price": 252.95,
+      "close_price": 274.75,
+      "high_price": 88.59,
+      "low_price": 154.28,
+      "volume": 846158
+    },
+    {
+      "id": 146,
+      "ticker_symbol": "GOOG",
+      "date": "2025-04-11",
+      "open_price": 315.69,
+      "close_price": 82.05,
+      "high_price": 169.06,
+      "low_price": 78.99,
+      "volume": 90082
+    },
+    {
+      "id": 147,
+      "ticker_symbol": "GOOG",
+      "date": "2025-02-28",
+      "open_price": 230.26,
+      "close_price": 149.37,
+      "high_price": 120.93,
+      "low_price": 308.73,
+      "volume": 488942
+    },
+    {
+      "id": 148,
+      "ticker_symbol": "AAPL",
+      "date": "2025-08-26",
+      "open_price": 189.81,
+      "close_price": 440.86,
+      "high_price": 448.73,
+      "low_price": 421.74,
+      "volume": 170860
+    },
+    {
+      "id": 149,
+      "ticker_symbol": "AAPL",
+      "date": "2025-02-06",
+      "open_price": 270.86,
+      "close_price": 327.04,
+      "high_price": 431.23,
+      "low_price": 450.05,
+      "volume": 908772
+    },
+    {
+      "id": 150,
+      "ticker_symbol": "AAPL",
+      "date": "2024-11-20",
+      "open_price": 318.32,
+      "close_price": 120.87,
+      "high_price": 63.81,
+      "low_price": 89.88,
+      "volume": 17696
+    },
+    {
+      "id": 151,
+      "ticker_symbol": "AAPL",
+      "date": "2025-07-21",
+      "open_price": 275.33,
+      "close_price": 277.83,
+      "high_price": 358.15,
+      "low_price": 66.17,
+      "volume": 394811
+    },
+    {
+      "id": 152,
+      "ticker_symbol": "AAPL",
+      "date": "2025-05-19",
+      "open_price": 212.57,
+      "close_price": 218.61,
+      "high_price": 449.76,
+      "low_price": 277.7,
+      "volume": 230222
+    },
+    {
+      "id": 153,
+      "ticker_symbol": "MSFT",
+      "date": "2025-08-11",
+      "open_price": 295,
+      "close_price": 138.4,
+      "high_price": 180.52,
+      "low_price": 85.29,
+      "volume": 984314
+    },
+    {
+      "id": 154,
+      "ticker_symbol": "MSFT",
+      "date": "2025-05-28",
+      "open_price": 309.36,
+      "close_price": 297.84,
+      "high_price": 226.09,
+      "low_price": 382.94,
+      "volume": 259188
+    },
+    {
+      "id": 155,
+      "ticker_symbol": "MSFT",
+      "date": "2025-03-06",
+      "open_price": 261.52,
+      "close_price": 81.95,
+      "high_price": 408.38,
+      "low_price": 284.92,
+      "volume": 482479
+    },
+    {
+      "id": 156,
+      "ticker_symbol": "MSFT",
+      "date": "2024-10-18",
+      "open_price": 216.81,
+      "close_price": 56.01,
+      "high_price": 69.16,
+      "low_price": 332.92,
+      "volume": 228836
+    },
+    {
+      "id": 157,
+      "ticker_symbol": "MSFT",
+      "date": "2024-11-07",
+      "open_price": 354.9,
+      "close_price": 347.82,
+      "high_price": 475.94,
+      "low_price": 368.35,
+      "volume": 774897
+    },
+    {
+      "id": 158,
+      "ticker_symbol": "AMZN",
+      "date": "2025-03-11",
+      "open_price": 160.57,
+      "close_price": 390.21,
+      "high_price": 416.09,
+      "low_price": 221.34,
+      "volume": 943145
+    },
+    {
+      "id": 159,
+      "ticker_symbol": "AMZN",
+      "date": "2025-03-14",
+      "open_price": 223.96,
+      "close_price": 477.05,
+      "high_price": 184.61,
+      "low_price": 401.78,
+      "volume": 248092
+    },
+    {
+      "id": 160,
+      "ticker_symbol": "AMZN",
+      "date": "2024-12-12",
+      "open_price": 327.5,
+      "close_price": 60.77,
+      "high_price": 183.13,
+      "low_price": 428.49,
+      "volume": 721901
+    },
+    {
+      "id": 161,
+      "ticker_symbol": "AMZN",
+      "date": "2025-01-13",
+      "open_price": 269.22,
+      "close_price": 238.42,
+      "high_price": 439.08,
+      "low_price": 63.25,
+      "volume": 661597
+    },
+    {
+      "id": 162,
+      "ticker_symbol": "AMZN",
+      "date": "2025-04-23",
+      "open_price": 495.4,
+      "close_price": 341.83,
+      "high_price": 209.94,
+      "low_price": 449.67,
+      "volume": 248374
+    },
+    {
+      "id": 163,
+      "ticker_symbol": "TSLA",
+      "date": "2025-05-16",
+      "open_price": 216.01,
+      "close_price": 462.23,
+      "high_price": 335.99,
+      "low_price": 242.89,
+      "volume": 328831
+    },
+    {
+      "id": 164,
+      "ticker_symbol": "TSLA",
+      "date": "2025-05-15",
+      "open_price": 451.3,
+      "close_price": 190.22,
+      "high_price": 291.25,
+      "low_price": 161.88,
+      "volume": 95824
+    },
+    {
+      "id": 165,
+      "ticker_symbol": "TSLA",
+      "date": "2025-04-14",
+      "open_price": 299.24,
+      "close_price": 352.89,
+      "high_price": 193.48,
+      "low_price": 144.66,
+      "volume": 560243
+    },
+    {
+      "id": 166,
+      "ticker_symbol": "TSLA",
+      "date": "2025-08-02",
+      "open_price": 209.88,
+      "close_price": 392.38,
+      "high_price": 473.86,
+      "low_price": 94.84,
+      "volume": 849681
+    },
+    {
+      "id": 167,
+      "ticker_symbol": "TSLA",
+      "date": "2024-11-19",
+      "open_price": 359.03,
+      "close_price": 295.18,
+      "high_price": 374.04,
+      "low_price": 267.45,
+      "volume": 767833
+    },
+    {
+      "id": 168,
+      "ticker_symbol": "GOOG",
+      "date": "2024-12-22",
+      "open_price": 62.78,
+      "close_price": 134.51,
+      "high_price": 347.51,
+      "low_price": 255.44,
+      "volume": 393310
+    },
+    {
+      "id": 169,
+      "ticker_symbol": "GOOG",
+      "date": "2024-09-26",
+      "open_price": 187.57,
+      "close_price": 260.22,
+      "high_price": 181.3,
+      "low_price": 236.1,
+      "volume": 565283
+    },
+    {
+      "id": 170,
+      "ticker_symbol": "GOOG",
+      "date": "2025-01-25",
+      "open_price": 482.28,
+      "close_price": 487.57,
+      "high_price": 380.8,
+      "low_price": 266.01,
+      "volume": 785946
+    },
+    {
+      "id": 171,
+      "ticker_symbol": "GOOG",
+      "date": "2024-11-18",
+      "open_price": 385.08,
+      "close_price": 465.15,
+      "high_price": 108.53,
+      "low_price": 270.9,
+      "volume": 748419
+    },
+    {
+      "id": 172,
+      "ticker_symbol": "GOOG",
+      "date": "2025-06-30",
+      "open_price": 147.57,
+      "close_price": 420.86,
+      "high_price": 213.14,
+      "low_price": 381.52,
+      "volume": 342160
+    },
+    {
+      "id": 173,
+      "ticker_symbol": "AAPL",
+      "date": "2025-02-14",
+      "open_price": 354.22,
+      "close_price": 444.17,
+      "high_price": 190.35,
+      "low_price": 371.56,
+      "volume": 774686
+    },
+    {
+      "id": 174,
+      "ticker_symbol": "AAPL",
+      "date": "2025-01-03",
+      "open_price": 309.34,
+      "close_price": 410.47,
+      "high_price": 158.28,
+      "low_price": 480.95,
+      "volume": 740210
+    },
+    {
+      "id": 175,
+      "ticker_symbol": "AAPL",
+      "date": "2025-07-15",
+      "open_price": 281.58,
+      "close_price": 400.38,
+      "high_price": 197.38,
+      "low_price": 352.16,
+      "volume": 120203
+    },
+    {
+      "id": 176,
+      "ticker_symbol": "AAPL",
+      "date": "2025-04-11",
+      "open_price": 96.2,
+      "close_price": 482.65,
+      "high_price": 339.12,
+      "low_price": 134.89,
+      "volume": 204351
+    },
+    {
+      "id": 177,
+      "ticker_symbol": "AAPL",
+      "date": "2025-08-13",
+      "open_price": 498.75,
+      "close_price": 362.48,
+      "high_price": 399.09,
+      "low_price": 474.52,
+      "volume": 782394
+    },
+    {
+      "id": 178,
+      "ticker_symbol": "MSFT",
+      "date": "2025-07-10",
+      "open_price": 223.36,
+      "close_price": 131.37,
+      "high_price": 389.59,
+      "low_price": 200.64,
+      "volume": 35865
+    },
+    {
+      "id": 179,
+      "ticker_symbol": "MSFT",
+      "date": "2025-03-21",
+      "open_price": 152.31,
+      "close_price": 138.18,
+      "high_price": 406.46,
+      "low_price": 302.9,
+      "volume": 400220
+    },
+    {
+      "id": 180,
+      "ticker_symbol": "MSFT",
+      "date": "2025-07-24",
+      "open_price": 417.69,
+      "close_price": 54.51,
+      "high_price": 395.21,
+      "low_price": 266.61,
+      "volume": 413863
+    },
+    {
+      "id": 181,
+      "ticker_symbol": "MSFT",
+      "date": "2024-12-18",
+      "open_price": 252.34,
+      "close_price": 302.77,
+      "high_price": 434.06,
+      "low_price": 384.25,
+      "volume": 576206
+    },
+    {
+      "id": 182,
+      "ticker_symbol": "MSFT",
+      "date": "2025-07-30",
+      "open_price": 264.79,
+      "close_price": 124.95,
+      "high_price": 318.13,
+      "low_price": 366.88,
+      "volume": 577570
+    },
+    {
+      "id": 183,
+      "ticker_symbol": "AMZN",
+      "date": "2025-07-20",
+      "open_price": 241.01,
+      "close_price": 161.44,
+      "high_price": 447.32,
+      "low_price": 341.03,
+      "volume": 238787
+    },
+    {
+      "id": 184,
+      "ticker_symbol": "AMZN",
+      "date": "2025-01-28",
+      "open_price": 273.08,
+      "close_price": 282.63,
+      "high_price": 222.6,
+      "low_price": 402.91,
+      "volume": 297052
+    },
+    {
+      "id": 185,
+      "ticker_symbol": "AMZN",
+      "date": "2025-01-21",
+      "open_price": 195.22,
+      "close_price": 122.99,
+      "high_price": 321.86,
+      "low_price": 228.08,
+      "volume": 776770
+    },
+    {
+      "id": 186,
+      "ticker_symbol": "AMZN",
+      "date": "2025-06-14",
+      "open_price": 206.9,
+      "close_price": 476.63,
+      "high_price": 320.82,
+      "low_price": 212.31,
+      "volume": 987050
+    },
+    {
+      "id": 187,
+      "ticker_symbol": "AMZN",
+      "date": "2025-07-12",
+      "open_price": 153.23,
+      "close_price": 114.6,
+      "high_price": 344.52,
+      "low_price": 409.43,
+      "volume": 999634
+    },
+    {
+      "id": 188,
+      "ticker_symbol": "TSLA",
+      "date": "2025-05-08",
+      "open_price": 285.39,
+      "close_price": 214.88,
+      "high_price": 420.02,
+      "low_price": 81.86,
+      "volume": 676591
+    },
+    {
+      "id": 189,
+      "ticker_symbol": "TSLA",
+      "date": "2024-10-06",
+      "open_price": 285.84,
+      "close_price": 494.04,
+      "high_price": 265.19,
+      "low_price": 450.04,
+      "volume": 281590
+    },
+    {
+      "id": 190,
+      "ticker_symbol": "TSLA",
+      "date": "2024-12-14",
+      "open_price": 408.18,
+      "close_price": 96.43,
+      "high_price": 316.18,
+      "low_price": 334.08,
+      "volume": 754297
+    },
+    {
+      "id": 191,
+      "ticker_symbol": "TSLA",
+      "date": "2025-06-20",
+      "open_price": 296.22,
+      "close_price": 243.24,
+      "high_price": 369.93,
+      "low_price": 169.95,
+      "volume": 383509
+    },
+    {
+      "id": 192,
+      "ticker_symbol": "TSLA",
+      "date": "2025-01-11",
+      "open_price": 480.27,
+      "close_price": 381.94,
+      "high_price": 90.01,
+      "low_price": 205.75,
+      "volume": 198074
+    },
+    {
+      "id": 193,
+      "ticker_symbol": "GOOG",
+      "date": "2024-10-30",
+      "open_price": 273.68,
+      "close_price": 389,
+      "high_price": 273.84,
+      "low_price": 288.42,
+      "volume": 317297
+    },
+    {
+      "id": 194,
+      "ticker_symbol": "GOOG",
+      "date": "2025-06-04",
+      "open_price": 57.6,
+      "close_price": 250.3,
+      "high_price": 272.15,
+      "low_price": 238.72,
+      "volume": 82195
+    },
+    {
+      "id": 195,
+      "ticker_symbol": "GOOG",
+      "date": "2025-06-22",
+      "open_price": 61.42,
+      "close_price": 121.76,
+      "high_price": 306.37,
+      "low_price": 386.49,
+      "volume": 464165
+    },
+    {
+      "id": 196,
+      "ticker_symbol": "GOOG",
+      "date": "2025-08-02",
+      "open_price": 396.24,
+      "close_price": 172.48,
+      "high_price": 263.41,
+      "low_price": 155.42,
+      "volume": 246539
+    },
+    {
+      "id": 197,
+      "ticker_symbol": "GOOG",
+      "date": "2025-07-13",
+      "open_price": 105.49,
+      "close_price": 369.06,
+      "high_price": 436.92,
+      "low_price": 451.43,
+      "volume": 841338
+    },
+    {
+      "id": 198,
+      "ticker_symbol": "AAPL",
+      "date": "2025-08-27",
+      "open_price": 64.55,
+      "close_price": 410.95,
+      "high_price": 205.69,
+      "low_price": 470.38,
+      "volume": 480510
+    },
+    {
+      "id": 199,
+      "ticker_symbol": "AAPL",
+      "date": "2025-02-15",
+      "open_price": 349.58,
+      "close_price": 295.37,
+      "high_price": 437.75,
+      "low_price": 442.79,
+      "volume": 839556
+    },
+    {
+      "id": 200,
+      "ticker_symbol": "AAPL",
+      "date": "2025-08-21",
+      "open_price": 250.38,
+      "close_price": 389.39,
+      "high_price": 371.84,
+      "low_price": 431.47,
+      "volume": 978658
+    },
+    {
+      "id": 201,
+      "ticker_symbol": "AAPL",
+      "date": "2024-12-02",
+      "open_price": 418.35,
+      "close_price": 110.63,
+      "high_price": 102.76,
+      "low_price": 425.34,
+      "volume": 495677
+    },
+    {
+      "id": 202,
+      "ticker_symbol": "AAPL",
+      "date": "2025-07-22",
+      "open_price": 194.44,
+      "close_price": 298.35,
+      "high_price": 340.77,
+      "low_price": 174.92,
+      "volume": 325412
+    },
+    {
+      "id": 203,
+      "ticker_symbol": "MSFT",
+      "date": "2024-09-25",
+      "open_price": 236.3,
+      "close_price": 114.08,
+      "high_price": 362.36,
+      "low_price": 339.51,
+      "volume": 868622
+    },
+    {
+      "id": 204,
+      "ticker_symbol": "MSFT",
+      "date": "2025-02-19",
+      "open_price": 248.71,
+      "close_price": 76.16,
+      "high_price": 104.29,
+      "low_price": 149.83,
+      "volume": 303902
+    },
+    {
+      "id": 205,
+      "ticker_symbol": "MSFT",
+      "date": "2025-02-02",
+      "open_price": 89.39,
+      "close_price": 333.56,
+      "high_price": 187.28,
+      "low_price": 203.57,
+      "volume": 839630
+    },
+    {
+      "id": 206,
+      "ticker_symbol": "MSFT",
+      "date": "2025-02-21",
+      "open_price": 497.47,
+      "close_price": 171.48,
+      "high_price": 121.1,
+      "low_price": 367.44,
+      "volume": 819649
+    },
+    {
+      "id": 207,
+      "ticker_symbol": "MSFT",
+      "date": "2025-04-03",
+      "open_price": 204.14,
+      "close_price": 452.85,
+      "high_price": 255.24,
+      "low_price": 348.75,
+      "volume": 367094
+    },
+    {
+      "id": 208,
+      "ticker_symbol": "AMZN",
+      "date": "2025-01-04",
+      "open_price": 215.08,
+      "close_price": 481.96,
+      "high_price": 271.17,
+      "low_price": 409.59,
+      "volume": 412676
+    },
+    {
+      "id": 209,
+      "ticker_symbol": "AMZN",
+      "date": "2024-10-01",
+      "open_price": 89.23,
+      "close_price": 467.55,
+      "high_price": 125.75,
+      "low_price": 155.92,
+      "volume": 605735
+    },
+    {
+      "id": 210,
+      "ticker_symbol": "AMZN",
+      "date": "2025-04-10",
+      "open_price": 161.34,
+      "close_price": 412.51,
+      "high_price": 108.67,
+      "low_price": 440.75,
+      "volume": 612390
+    },
+    {
+      "id": 211,
+      "ticker_symbol": "AMZN",
+      "date": "2024-11-27",
+      "open_price": 78.59,
+      "close_price": 125.1,
+      "high_price": 463.59,
+      "low_price": 104.63,
+      "volume": 349017
+    },
+    {
+      "id": 212,
+      "ticker_symbol": "AMZN",
+      "date": "2025-04-29",
+      "open_price": 97.34,
+      "close_price": 481.03,
+      "high_price": 193.89,
+      "low_price": 160.02,
+      "volume": 448347
+    },
+    {
+      "id": 213,
+      "ticker_symbol": "TSLA",
+      "date": "2024-11-12",
+      "open_price": 172.18,
+      "close_price": 165.46,
+      "high_price": 84.78,
+      "low_price": 126.39,
+      "volume": 910567
+    },
+    {
+      "id": 214,
+      "ticker_symbol": "TSLA",
+      "date": "2025-01-05",
+      "open_price": 386.36,
+      "close_price": 290.51,
+      "high_price": 211.88,
+      "low_price": 66.89,
+      "volume": 815822
+    },
+    {
+      "id": 215,
+      "ticker_symbol": "TSLA",
+      "date": "2024-09-12",
+      "open_price": 490.24,
+      "close_price": 103.21,
+      "high_price": 334.56,
+      "low_price": 263.73,
+      "volume": 414654
+    },
+    {
+      "id": 216,
+      "ticker_symbol": "TSLA",
+      "date": "2025-05-23",
+      "open_price": 111.01,
+      "close_price": 415.9,
+      "high_price": 425.9,
+      "low_price": 226.5,
+      "volume": 804791
+    },
+    {
+      "id": 217,
+      "ticker_symbol": "GOOG",
+      "date": "2024-11-16",
+      "open_price": 236.64,
+      "close_price": 398.68,
+      "high_price": 261.51,
+      "low_price": 399.31,
+      "volume": 345775
+    },
+    {
+      "id": 218,
+      "ticker_symbol": "GOOG",
+      "date": "2025-04-14",
+      "open_price": 271.18,
+      "close_price": 218.78,
+      "high_price": 108.15,
+      "low_price": 388.42,
+      "volume": 422630
+    },
+    {
+      "id": 219,
+      "ticker_symbol": "GOOG",
+      "date": "2025-03-23",
+      "open_price": 243.31,
+      "close_price": 69.37,
+      "high_price": 388.24,
+      "low_price": 467.29,
+      "volume": 159490
+    },
+    {
+      "id": 220,
+      "ticker_symbol": "GOOG",
+      "date": "2025-03-28",
+      "open_price": 96.5,
+      "close_price": 162.27,
+      "high_price": 68.3,
+      "low_price": 84.32,
+      "volume": 155998
+    },
+    {
+      "id": 221,
+      "ticker_symbol": "GOOG",
+      "date": "2025-01-11",
+      "open_price": 336.23,
+      "close_price": 176.39,
+      "high_price": 239.71,
+      "low_price": 300.3,
+      "volume": 625765
+    },
+    {
+      "id": 222,
+      "ticker_symbol": "AAPL",
+      "date": "2024-10-23",
+      "open_price": 460.61,
+      "close_price": 269.48,
+      "high_price": 156.12,
+      "low_price": 376.39,
+      "volume": 754643
+    },
+    {
+      "id": 223,
+      "ticker_symbol": "AAPL",
+      "date": "2025-08-06",
+      "open_price": 57.18,
+      "close_price": 144.09,
+      "high_price": 192.18,
+      "low_price": 154.43,
+      "volume": 186771
+    },
+    {
+      "id": 224,
+      "ticker_symbol": "AAPL",
+      "date": "2025-05-03",
+      "open_price": 179.98,
+      "close_price": 311.2,
+      "high_price": 209.1,
+      "low_price": 225.27,
+      "volume": 347058
+    },
+    {
+      "id": 225,
+      "ticker_symbol": "AAPL",
+      "date": "2025-01-09",
+      "open_price": 490.2,
+      "close_price": 329.29,
+      "high_price": 391.68,
+      "low_price": 99.78,
+      "volume": 524342
+    },
+    {
+      "id": 226,
+      "ticker_symbol": "AAPL",
+      "date": "2024-10-20",
+      "open_price": 154.84,
+      "close_price": 489.81,
+      "high_price": 478.61,
+      "low_price": 177.89,
+      "volume": 548789
+    },
+    {
+      "id": 227,
+      "ticker_symbol": "MSFT",
+      "date": "2024-08-31",
+      "open_price": 109.78,
+      "close_price": 399.74,
+      "high_price": 475.94,
+      "low_price": 307.5,
+      "volume": 140236
+    },
+    {
+      "id": 228,
+      "ticker_symbol": "MSFT",
+      "date": "2025-03-02",
+      "open_price": 190.62,
+      "close_price": 393.53,
+      "high_price": 257.69,
+      "low_price": 334.01,
+      "volume": 846908
+    },
+    {
+      "id": 229,
+      "ticker_symbol": "MSFT",
+      "date": "2024-09-04",
+      "open_price": 325.13,
+      "close_price": 178.08,
+      "high_price": 55.89,
+      "low_price": 316.17,
+      "volume": 721725
+    },
+    {
+      "id": 230,
+      "ticker_symbol": "MSFT",
+      "date": "2025-08-20",
+      "open_price": 345.19,
+      "close_price": 273.07,
+      "high_price": 259.76,
+      "low_price": 293.37,
+      "volume": 390467
+    },
+    {
+      "id": 231,
+      "ticker_symbol": "AMZN",
+      "date": "2024-09-26",
+      "open_price": 257,
+      "close_price": 487.75,
+      "high_price": 155.55,
+      "low_price": 239.68,
+      "volume": 651005
+    },
+    {
+      "id": 232,
+      "ticker_symbol": "AMZN",
+      "date": "2025-02-06",
+      "open_price": 172.62,
+      "close_price": 328.9,
+      "high_price": 339.49,
+      "low_price": 476.68,
+      "volume": 877199
+    },
+    {
+      "id": 233,
+      "ticker_symbol": "AMZN",
+      "date": "2024-11-20",
+      "open_price": 470.81,
+      "close_price": 96.86,
+      "high_price": 208.57,
+      "low_price": 480.88,
+      "volume": 577333
+    },
+    {
+      "id": 234,
+      "ticker_symbol": "AMZN",
+      "date": "2025-05-19",
+      "open_price": 121.66,
+      "close_price": 323.29,
+      "high_price": 318.2,
+      "low_price": 90.28,
+      "volume": 558922
+    },
+    {
+      "id": 235,
+      "ticker_symbol": "AMZN",
+      "date": "2025-05-02",
+      "open_price": 450.28,
+      "close_price": 273.88,
+      "high_price": 427.45,
+      "low_price": 436.81,
+      "volume": 943755
+    },
+    {
+      "id": 236,
+      "ticker_symbol": "TSLA",
+      "date": "2024-11-16",
+      "open_price": 478.86,
+      "close_price": 121.58,
+      "high_price": 54.79,
+      "low_price": 149.24,
+      "volume": 952412
+    },
+    {
+      "id": 237,
+      "ticker_symbol": "TSLA",
+      "date": "2025-05-03",
+      "open_price": 89.81,
+      "close_price": 256.12,
+      "high_price": 318.57,
+      "low_price": 285.69,
+      "volume": 499884
+    },
+    {
+      "id": 238,
+      "ticker_symbol": "TSLA",
+      "date": "2025-01-20",
+      "open_price": 158.07,
+      "close_price": 289.78,
+      "high_price": 144.1,
+      "low_price": 187.06,
+      "volume": 954498
+    },
+    {
+      "id": 239,
+      "ticker_symbol": "TSLA",
+      "date": "2025-05-13",
+      "open_price": 147.58,
+      "close_price": 152.36,
+      "high_price": 72.89,
+      "low_price": 184.65,
+      "volume": 605188
+    },
+    {
+      "id": 240,
+      "ticker_symbol": "TSLA",
+      "date": "2024-09-11",
+      "open_price": 277.71,
+      "close_price": 459.42,
+      "high_price": 314.69,
+      "low_price": 435.98,
+      "volume": 816831
+    },
+    {
+      "id": 241,
+      "ticker_symbol": "GOOG",
+      "date": "2025-01-22",
+      "open_price": 471.74,
+      "close_price": 454.03,
+      "high_price": 244.8,
+      "low_price": 442.68,
+      "volume": 86409
+    },
+    {
+      "id": 242,
+      "ticker_symbol": "GOOG",
+      "date": "2025-01-30",
+      "open_price": 325.03,
+      "close_price": 89.74,
+      "high_price": 441.1,
+      "low_price": 162.37,
+      "volume": 852160
+    },
+    {
+      "id": 243,
+      "ticker_symbol": "GOOG",
+      "date": "2025-08-28",
+      "open_price": 101.7,
+      "close_price": 493.34,
+      "high_price": 204.15,
+      "low_price": 133.04,
+      "volume": 150353
+    },
+    {
+      "id": 244,
+      "ticker_symbol": "GOOG",
+      "date": "2025-07-25",
+      "open_price": 152.89,
+      "close_price": 294.06,
+      "high_price": 152.02,
+      "low_price": 289.87,
+      "volume": 544435
+    },
+    {
+      "id": 245,
+      "ticker_symbol": "GOOG",
+      "date": "2024-12-08",
+      "open_price": 230.72,
+      "close_price": 370.81,
+      "high_price": 209.61,
+      "low_price": 300.76,
+      "volume": 97001
+    }
+  ],
+  "fund_performances": [
+    {
+      "performance_id": 26,
+      "date": "2025-03-27",
+      "net_asset_value": 1822415.89,
+      "return_percentage": 12.52,
+      "fund": 16
+    },
+    {
+      "performance_id": 27,
+      "date": "2024-11-19",
+      "net_asset_value": 1859062.18,
+      "return_percentage": -9.88,
+      "fund": 16
+    },
+    {
+      "performance_id": 28,
+      "date": "2025-07-03",
+      "net_asset_value": 3815605.87,
+      "return_percentage": -9.89,
+      "fund": 16
+    },
+    {
+      "performance_id": 29,
+      "date": "2025-06-15",
+      "net_asset_value": 2634078.76,
+      "return_percentage": 14.55,
+      "fund": 16
+    },
+    {
+      "performance_id": 30,
+      "date": "2025-01-29",
+      "net_asset_value": 1049817.77,
+      "return_percentage": 6.59,
+      "fund": 16
+    },
+    {
+      "performance_id": 31,
+      "date": "2025-05-20",
+      "net_asset_value": 4804828.06,
+      "return_percentage": 16.53,
+      "fund": 17
+    },
+    {
+      "performance_id": 32,
+      "date": "2025-02-26",
+      "net_asset_value": 1104071.85,
+      "return_percentage": 5.05,
+      "fund": 17
+    },
+    {
+      "performance_id": 33,
+      "date": "2025-01-01",
+      "net_asset_value": 1696148.59,
+      "return_percentage": 7.06,
+      "fund": 17
+    },
+    {
+      "performance_id": 34,
+      "date": "2025-01-10",
+      "net_asset_value": 3768817.56,
+      "return_percentage": -1.44,
+      "fund": 17
+    },
+    {
+      "performance_id": 35,
+      "date": "2025-04-11",
+      "net_asset_value": 1436552.03,
+      "return_percentage": 5.49,
+      "fund": 17
+    },
+    {
+      "performance_id": 36,
+      "date": "2025-03-12",
+      "net_asset_value": 4348068.12,
+      "return_percentage": 5.42,
+      "fund": 18
+    },
+    {
+      "performance_id": 37,
+      "date": "2025-06-13",
+      "net_asset_value": 4465451.45,
+      "return_percentage": 15.09,
+      "fund": 18
+    },
+    {
+      "performance_id": 38,
+      "date": "2025-05-22",
+      "net_asset_value": 3577960.04,
+      "return_percentage": -7.38,
+      "fund": 18
+    },
+    {
+      "performance_id": 39,
+      "date": "2024-12-26",
+      "net_asset_value": 2454490.93,
+      "return_percentage": -4.9,
+      "fund": 18
+    },
+    {
+      "performance_id": 40,
+      "date": "2025-03-28",
+      "net_asset_value": 1437851.33,
+      "return_percentage": 8.65,
+      "fund": 18
+    },
+    {
+      "performance_id": 41,
+      "date": "2025-03-19",
+      "net_asset_value": 3035205.56,
+      "return_percentage": -8.54,
+      "fund": 19
+    },
+    {
+      "performance_id": 42,
+      "date": "2025-07-29",
+      "net_asset_value": 2313446.5,
+      "return_percentage": -4.9,
+      "fund": 19
+    },
+    {
+      "performance_id": 43,
+      "date": "2025-02-16",
+      "net_asset_value": 1327497.71,
+      "return_percentage": -8.43,
+      "fund": 19
+    },
+    {
+      "performance_id": 44,
+      "date": "2024-10-24",
+      "net_asset_value": 2872337.01,
+      "return_percentage": -2.15,
+      "fund": 19
+    },
+    {
+      "performance_id": 45,
+      "date": "2024-09-29",
+      "net_asset_value": 1409516.86,
+      "return_percentage": 19.65,
+      "fund": 19
+    },
+    {
+      "performance_id": 46,
+      "date": "2025-05-13",
+      "net_asset_value": 1054082.06,
+      "return_percentage": 17.29,
+      "fund": 20
+    },
+    {
+      "performance_id": 47,
+      "date": "2025-02-06",
+      "net_asset_value": 1417745.57,
+      "return_percentage": 12.06,
+      "fund": 20
+    },
+    {
+      "performance_id": 48,
+      "date": "2025-01-03",
+      "net_asset_value": 1728137.81,
+      "return_percentage": 4.67,
+      "fund": 20
+    },
+    {
+      "performance_id": 49,
+      "date": "2024-10-18",
+      "net_asset_value": 1842740.42,
+      "return_percentage": 12.6,
+      "fund": 20
+    },
+    {
+      "performance_id": 50,
+      "date": "2025-05-01",
+      "net_asset_value": 2854831.28,
+      "return_percentage": 0.28,
+      "fund": 20
+    }
+  ],
+  "peer_funds": [
+    {
+      "peer_fund_id": 4,
+      "performances": [
+        {
+          "performance_id": 16,
+          "date": "2024-11-16",
+          "net_asset_value": 3588629.13,
+          "return_percentage": 10.98,
+          "peer_fund": 4
+        },
+        {
+          "performance_id": 17,
+          "date": "2025-01-23",
+          "net_asset_value": 3096806.81,
+          "return_percentage": 0.61,
+          "peer_fund": 4
+        },
+        {
+          "performance_id": 18,
+          "date": "2025-03-25",
+          "net_asset_value": 2949302.29,
+          "return_percentage": 10.48,
+          "peer_fund": 4
+        },
+        {
+          "performance_id": 19,
+          "date": "2025-04-26",
+          "net_asset_value": 4184574.43,
+          "return_percentage": -7.05,
+          "peer_fund": 4
+        },
+        {
+          "performance_id": 20,
+          "date": "2024-09-21",
+          "net_asset_value": 4720351.77,
+          "return_percentage": 12.93,
+          "peer_fund": 4
+        }
+      ],
+      "name": "Garcia and Sons Peer Fund",
+      "strategy": "Balanced"
+    },
+    {
+      "peer_fund_id": 5,
+      "performances": [
+        {
+          "performance_id": 21,
+          "date": "2025-05-25",
+          "net_asset_value": 3667365.31,
+          "return_percentage": 0.45,
+          "peer_fund": 5
+        },
+        {
+          "performance_id": 22,
+          "date": "2024-10-29",
+          "net_asset_value": 2893000.23,
+          "return_percentage": 15.91,
+          "peer_fund": 5
+        },
+        {
+          "performance_id": 23,
+          "date": "2024-12-06",
+          "net_asset_value": 3551373.58,
+          "return_percentage": -9.75,
+          "peer_fund": 5
+        },
+        {
+          "performance_id": 24,
+          "date": "2025-03-03",
+          "net_asset_value": 3402000.48,
+          "return_percentage": 1.32,
+          "peer_fund": 5
+        },
+        {
+          "performance_id": 25,
+          "date": "2025-05-14",
+          "net_asset_value": 3121309.8,
+          "return_percentage": 8.69,
+          "peer_fund": 5
+        }
+      ],
+      "name": "Owen-Patterson Peer Fund",
+      "strategy": "Balanced"
+    },
+    {
+      "peer_fund_id": 6,
+      "performances": [
+        {
+          "performance_id": 26,
+          "date": "2024-11-26",
+          "net_asset_value": 1578732.34,
+          "return_percentage": -8.41,
+          "peer_fund": 6
+        },
+        {
+          "performance_id": 27,
+          "date": "2025-03-15",
+          "net_asset_value": 4610387.01,
+          "return_percentage": 9.96,
+          "peer_fund": 6
+        },
+        {
+          "performance_id": 28,
+          "date": "2025-05-12",
+          "net_asset_value": 1513517.97,
+          "return_percentage": 11.75,
+          "peer_fund": 6
+        },
+        {
+          "performance_id": 29,
+          "date": "2025-05-05",
+          "net_asset_value": 3609598.34,
+          "return_percentage": 7.35,
+          "peer_fund": 6
+        },
+        {
+          "performance_id": 30,
+          "date": "2025-07-13",
+          "net_asset_value": 4117222.51,
+          "return_percentage": 0.11,
+          "peer_fund": 6
+        }
+      ],
+      "name": "Harmon PLC Peer Fund",
+      "strategy": "Balanced"
+    }
+  ],
+  "peer_performances": [
+    {
+      "performance_id": 16,
+      "date": "2024-11-16",
+      "net_asset_value": 3588629.13,
+      "return_percentage": 10.98,
+      "peer_fund": 4
+    },
+    {
+      "performance_id": 17,
+      "date": "2025-01-23",
+      "net_asset_value": 3096806.81,
+      "return_percentage": 0.61,
+      "peer_fund": 4
+    },
+    {
+      "performance_id": 18,
+      "date": "2025-03-25",
+      "net_asset_value": 2949302.29,
+      "return_percentage": 10.48,
+      "peer_fund": 4
+    },
+    {
+      "performance_id": 19,
+      "date": "2025-04-26",
+      "net_asset_value": 4184574.43,
+      "return_percentage": -7.05,
+      "peer_fund": 4
+    },
+    {
+      "performance_id": 20,
+      "date": "2024-09-21",
+      "net_asset_value": 4720351.77,
+      "return_percentage": 12.93,
+      "peer_fund": 4
+    },
+    {
+      "performance_id": 21,
+      "date": "2025-05-25",
+      "net_asset_value": 3667365.31,
+      "return_percentage": 0.45,
+      "peer_fund": 5
+    },
+    {
+      "performance_id": 22,
+      "date": "2024-10-29",
+      "net_asset_value": 2893000.23,
+      "return_percentage": 15.91,
+      "peer_fund": 5
+    },
+    {
+      "performance_id": 23,
+      "date": "2024-12-06",
+      "net_asset_value": 3551373.58,
+      "return_percentage": -9.75,
+      "peer_fund": 5
+    },
+    {
+      "performance_id": 24,
+      "date": "2025-03-03",
+      "net_asset_value": 3402000.48,
+      "return_percentage": 1.32,
+      "peer_fund": 5
+    },
+    {
+      "performance_id": 25,
+      "date": "2025-05-14",
+      "net_asset_value": 3121309.8,
+      "return_percentage": 8.69,
+      "peer_fund": 5
+    },
+    {
+      "performance_id": 26,
+      "date": "2024-11-26",
+      "net_asset_value": 1578732.34,
+      "return_percentage": -8.41,
+      "peer_fund": 6
+    },
+    {
+      "performance_id": 27,
+      "date": "2025-03-15",
+      "net_asset_value": 4610387.01,
+      "return_percentage": 9.96,
+      "peer_fund": 6
+    },
+    {
+      "performance_id": 28,
+      "date": "2025-05-12",
+      "net_asset_value": 1513517.97,
+      "return_percentage": 11.75,
+      "peer_fund": 6
+    },
+    {
+      "performance_id": 29,
+      "date": "2025-05-05",
+      "net_asset_value": 3609598.34,
+      "return_percentage": 7.35,
+      "peer_fund": 6
+    },
+    {
+      "performance_id": 30,
+      "date": "2025-07-13",
+      "net_asset_value": 4117222.51,
+      "return_percentage": 0.11,
+      "peer_fund": 6
+    }
+  ]
+}
