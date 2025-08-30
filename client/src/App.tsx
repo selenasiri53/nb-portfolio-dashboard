@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Funds from "./pages/Funds";
 import Peers from "./pages/Peers";
 import FundDetail from "./components/FundDetail";
+import Navbar from "./components/Navbar";
 // import axios from "axios";
 // import { useEffect, useState } from "react";
 
@@ -24,15 +25,25 @@ function App() {
       {/* <h1 className="text-white">{message}</h1> */}
         <Header />
         {/* Router */}
+
+        <div className="lg:min-h-[88vh] border-[0.5px] border-neutral-500 rounded-4xl">
+      <div className="lg:flex">
+        <Navbar />
+        {/* Content */}
+        <div className="lg:w-full bg-white/15 p-4 py-6 md:px-8 lg:rounded-r-4xl space-y-4">
+           
         <Routes>
           <Route path="/dashboard" element={<Home />} />
           <Route path="/funds" element={<Funds />} />
-          <Route path="/fund-detail" element={<FundDetail />} />
+          <Route path="/fund/:fundId" element={<FundDetail />} />
           <Route path="/peers" element={<Peers />} />
           
           {/* default path */}
           <Route path="*" element={<Home />} />
         </Routes>
+        </div>
+        </div>
+        </div>
       </div>
     </Router>
   );

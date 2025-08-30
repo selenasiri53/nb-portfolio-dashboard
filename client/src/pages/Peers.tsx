@@ -1,8 +1,6 @@
-import DashboardLayout from "../components/DashboardLayout";
-
 const Peers = () => {
   return (
-    <DashboardLayout>
+    <div>
         <div>
           <h1 className="text-3xl font-thin text-neutral-100">Peer Comparison Funds</h1>
           <h3 className="text-sm font-thin text-indigo-200 pb-3">
@@ -10,7 +8,7 @@ const Peers = () => {
           </h3>
          
         </div>
-    </DashboardLayout>
+    </div>
   );
 };
 

@@ -1,9 +1,8 @@
-import DashboardLayout from "../components/DashboardLayout";
 import FundsTable from "../components/charts/FundsTable";
 
 const Funds = () => {
   return (
-    <DashboardLayout>
+    <div>
         <div>
           <h1 className="text-3xl font-thin text-neutral-100">Funds</h1>
           <h3 className="text-sm font-thin text-indigo-200 pb-3">
@@ -15,7 +14,7 @@ const Funds = () => {
           </div>
           </div>
         </div>
-    </DashboardLayout>
+    </div>
   );
 };
 
