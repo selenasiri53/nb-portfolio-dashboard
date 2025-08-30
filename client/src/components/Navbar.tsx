@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { LayoutDashboard, TrendingUp, Users } from "lucide-react";
+import { LayoutDashboard, TrendingUp } from "lucide-react";
 import Tooltip from "@mui/joy/Tooltip";
 
 const Navbar = () => {
@@ -22,16 +22,6 @@ const Navbar = () => {
           className="hover:bg-neutral-200 p-3 rounded-2xl flex justify-center items-center"
         >
           <TrendingUp size={24} />
-        </Link>
-      </Tooltip>
-
-      {/* Peer comparison */}
-      <Tooltip title="Peers" placement="left" variant="soft">
-        <Link
-          to="/peers"
-          className="hover:bg-neutral-200 p-3 rounded-2xl flex justify-center items-center"
-        >
-          <Users size={24} />
         </Link>
       </Tooltip>
     </div>

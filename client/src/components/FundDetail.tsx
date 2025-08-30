@@ -2,7 +2,7 @@ import { ArrowLeft } from "lucide-react";
 
 const FundDetail = () => {
   return (
-    <div className=" min-h-screen">
+    <div className="min-h-screen">
       <div className="flex gap-4">
         {/* left */}
         <h1 className="text-3xl font-thin text-neutral-100">Fund Detail</h1>
