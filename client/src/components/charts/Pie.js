@@ -45,7 +45,7 @@ import {
         },
         title: {
           display: true,
-          text: "Fund Allocation Across Stocks",
+          text: "Select an item to see its holdings",
           color: "#fff",
           font: {
             size: 18,

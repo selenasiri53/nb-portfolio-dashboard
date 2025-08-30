@@ -6,10 +6,15 @@ import {
     Title,
   } from "chart.js";
   import { Pie } from "react-chartjs-2";
-  
-  ChartJS.register(ArcElement, Tooltip, Legend, Title);
 
-const PieSection = () => {
+  interface SelectedFundProps {
+    selectedFund: number | null;
+    setSelectedFund: (id: number) => void;
+  }
+  
+ChartJS.register(ArcElement, Tooltip, Legend, Title);
+
+const PieSection = ({ selectedFund, setSelectedFund }: SelectedFundProps) => {
     const data = {
         labels: ["Apple", "Microsoft", "Amazon", "Tesla", "Google"],
         datasets: [

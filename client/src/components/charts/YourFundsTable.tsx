@@ -3,7 +3,12 @@ import { useFunds } from '../../hooks/useFunds';
 import type { Fund } from '../../types/api';
 import { Eye } from 'lucide-react';
 
-export default function TableHover() {
+interface SelectedFundProps {
+  selectedFund: number | null;
+  setSelectedFund: (id: number) => void;
+}
+
+export default function YourFundsTable({ selectedFund, setSelectedFund }: SelectedFundProps) {
   console.log('hhhhhhh')
   const { data, isLoading, error } = useFunds()
 
@@ -21,7 +26,7 @@ export default function TableHover() {
           <th style={{ width: '45%' }}>Fund</th>
           <th  style={{ width: '25%' }}>Strategy</th>
           {/* <th  style={{ width: '15%' }}>Manager</th> */}
-          <th  style={{ width: '25%' }}>Inception Date</th>
+          <th  style={{ width: '23%' }}>Inception Date</th>
         </tr>
       </thead>
       <tbody>
@@ -30,11 +35,12 @@ export default function TableHover() {
           return (
             <tr
               key={fund.fund_id}
+              onClick={() => setSelectedFund(fund.fund_id)}
               className={`
-                cursor-pointer
-                transition-all
-               
-              `}
+              cursor-pointer
+              transition-all
+              ${selectedFund === fund.fund_id ? 'bg-teal-100' : ''}
+            `}
             >
               <td>{fund.name}</td>
               <td>{fund.strategy}</td>
