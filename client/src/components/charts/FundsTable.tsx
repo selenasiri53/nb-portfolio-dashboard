@@ -18,10 +18,10 @@ export default function TableHover() {
     <Table className="bg-white overflow-scroll">
       <thead>
         <tr>
-          <th style={{ width: '40%' }}>Fund</th>
-          <th  style={{ width: '20%' }}>Strategy</th>
+          <th style={{ width: '45%' }}>Fund</th>
+          <th  style={{ width: '25%' }}>Strategy</th>
           {/* <th  style={{ width: '15%' }}>Manager</th> */}
-          <th  style={{ width: '15%' }}>Inception Date</th>
+          <th  style={{ width: '25%' }}>Inception Date</th>
         </tr>
       </thead>
       <tbody>

@@ -16,6 +16,8 @@ const FundDetail = () => {
         <div className="space-y-3">
           <div className="lg:col-span-1 card rounded-2xl p-2 lg:p-4 bg-white min-h-screen overflow-scroll">
         {/* Card with image and description for each stock */}
+        <h1 className="text-lg font-normal text-neutral-900">Holdings</h1>
+
         {/* holding_id
           fund
           ticker_symbol
@@ -24,7 +26,8 @@ const FundDetail = () => {
           purchase_date
           logo_url
         */}
-        
+        <h1 className="text-lg font-normal text-neutral-900">Performance</h1>
+
         {/* fund performance */}
         {/* performance_id
         fund
