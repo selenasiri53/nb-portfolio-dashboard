@@ -27,8 +27,98 @@ $ python manage.py runserver
   ] 
 ```
 # Seed Django DB:
+<!-- 1. Open Django Shell -->
+```
+python manage.py shell
+```
+<!-- 2. Import models and tools -->
+```
+from portfolio.models import PortfolioManager, Fund, Holding, StockPrice
+from faker import Faker
+import random
+from datetime import datetime, timedelta
+import yfinance as yf
+
+fake = Faker()
+```
+<!-- 3. create portfolio-managers and funds -->
+```
+# Managers
+managers = [
+    PortfolioManager.objects.create(
+        name=fake.name(),
+        email=fake.unique.email()
+    ) for _ in range(3)
+]
+
+# Funds
+
+funds = [
+    Fund.objects.create(
+        manager=random.choice(managers),
+        name=f"{fake.company()} Growth Fund",
+        strategy=random.choice(["Growth", "Value", "Balanced"]),
+        inception_date=fake.date_between(start_date="-5y", end_date="today")
+    ) for _ in range(5)
+]
+```
+
+<!-- 4. Seed holdings -- real stock tickers from yahoo API -->
+```
+tickers = ["AAPL", "MSFT", "AMZN", "TSLA", "GOOG"]
+
+for fund in funds:
+    for ticker in tickers:
+        data = yf.Ticker(ticker).info
+        purchase_date = datetime.today() - timedelta(days=random.randint(30, 730))
+        Holding.objects.create(
+            fund=fund,
+            ticker_symbol=ticker,
+            shares=random.randint(10, 500),
+            purchase_price=round(random.uniform(50, 500), 2),
+            purchase_date=purchase_date.date(),
+            logo_url=data.get("logo_url")
+        )
+
+```
+
+<!-- 5. Seed stock prices -->
+```
+for holding in Holding.objects.all():
+    dates = set()
+    while len(dates) < 5:
+        dates.add((datetime.today() - timedelta(days=random.randint(1, 365))).date())
+    
+    for date in dates:
+        StockPrice.objects.create(
+            ticker_symbol=holding.ticker_symbol,
+            date=date,
+            open_price=round(random.uniform(50, 500), 2),
+            close_price=round(random.uniform(50, 500), 2),
+            high_price=round(random.uniform(50, 500), 2),
+            low_price=round(random.uniform(50, 500), 2),
+            volume=random.randint(10000, 1000000),
+        )
+```
+
+<!-- Quick option -->
 python manage.py seed portfolio --number=10
 <!-- python manage.py seed <app name> --number=<amount> -->
+
+<!-- To delete seeded data and start over: -->
+$ python manage.py shell
+
+% To clear DB - Run:
+```
+from portfolio.models import PortfolioManager, Fund, Holding, StockPrice, FundPerformance
+
+# Delete all records in the correct order to avoid FK constraints
+StockPrice.objects.all().delete()
+FundPerformance.objects.all().delete()
+Holding.objects.all().delete()
+Fund.objects.all().delete()
+PortfolioManager.objects.all().delete()
+```
 
 # Connecting with the frontend:
 In the client folder:

@@ -1,83 +1,226 @@
-from django.db import models
+from django.core.management.base import BaseCommand
+from django.db.utils import IntegrityError
+from portfolio.models import (
+    PortfolioManager,
+    Fund,
+    Holding,
+    StockPrice,
+    FundPerformance,
+    PeerFund,
+    PeerPerformance
+)
+from faker import Faker
+import random
+from datetime import datetime, timedelta
+import yfinance as yf
 
-class PortfolioManager(models.Model):
-    name = models.CharField(max_length=255)
-    email = models.EmailField(unique=True)
-    phone = models.CharField(max_length=20, blank=True, null=True)
-    department = models.CharField(max_length=100, blank=True, null=True)
-    funds_managed = models.PositiveIntegerField(default=0)
+fake = Faker()
 
-    def __str__(self):
-        return self.name
+class Command(BaseCommand):
+    help = "Seed the database with realistic portfolio data"
 
-class Fund(models.Model):
-    fund_id = models.AutoField(primary_key=True)
-    manager = models.ForeignKey(PortfolioManager, on_delete=models.CASCADE, related_name="funds")
-    name = models.CharField(max_length=255)
-    strategy = models.CharField(max_length=255)
-    inception_date = models.DateField()
+    def handle(self, *args, **kwargs):
+        self.stdout.write(self.style.WARNING("Clearing old data..."))
+        PeerPerformance.objects.all().delete()
+        PeerFund.objects.all().delete()
+        FundPerformance.objects.all().delete()
+        StockPrice.objects.all().delete()
+        Holding.objects.all().delete()
+        Fund.objects.all().delete()
+        PortfolioManager.objects.all().delete()
 
-    def __str__(self):
-        return self.name
+        self.stdout.write(self.style.WARNING("Seeding new data..."))
 
-class Holding(models.Model):
-    holding_id = models.AutoField(primary_key=True)
-    fund = models.ForeignKey(Fund, on_delete=models.CASCADE, related_name="holdings")
-    ticker_symbol = models.CharField(max_length=10)
-    shares = models.PositiveIntegerField()
-    purchase_price = models.FloatField()
-    purchase_date = models.DateField()
-    logo_url = models.URLField(blank=True, null=True)
+        # --- Portfolio Managers ---
+        managers = []
+        for _ in range(3):
+            manager = PortfolioManager.objects.create(
+                name=fake.name(),
+                email=fake.unique.email(),
+                phone=fake.phone_number(),
+                department=random.choice(["Equities", "Fixed Income", "Multi-Asset"]),
+                funds_managed=0,
+            )
+            managers.append(manager)
 
-    def __str__(self):
-        return f"{self.ticker_symbol} ({self.fund.name})"
+        # --- Funds ---
+        funds = []
+        for _ in range(5):
+            fund = Fund.objects.create(
+                manager=random.choice(managers),
+                name=f"{fake.company()} Growth Fund",
+                strategy=random.choice(["Growth", "Value", "Balanced"]),
+                inception_date=fake.date_between(start_date="-5y", end_date="today"),
+            )
+            funds.append(fund)
 
-class StockPrice(models.Model):
-    ticker_symbol = models.CharField(max_length=10)
-    date = models.DateField()
-    open_price = models.FloatField()
-    close_price = models.FloatField()
-    high_price = models.FloatField()
-    low_price = models.FloatField()
-    volume = models.PositiveIntegerField()
+        # --- Holdings ---
+        tickers = ["AAPL", "MSFT", "AMZN", "TSLA", "GOOG"]
+        holdings = []
 
-    class Meta:
-        unique_together = ("ticker_symbol", "date")
+        for fund in funds:
+            for ticker in tickers:
+                data = yf.Ticker(ticker).info
+                purchase_date = datetime.today() - timedelta(days=random.randint(30, 730))
+                holding = Holding.objects.create(
+                    fund=fund,
+                    ticker_symbol=ticker,
+                    shares=random.randint(10, 500),
+                    purchase_price=round(random.uniform(50, 500), 2),
+                    purchase_date=purchase_date.date(),
+                    logo_url=data.get("logo_url")
+                )
+                holdings.append(holding)
 
-    def __str__(self):
-        return f"{self.ticker_symbol} on {self.date}"
+        # --- Stock Prices (handle UNIQUE constraint) ---
+        for holding in holdings:
+            dates = set()
+            while len(dates) < 5:
+                dates.add((datetime.today() - timedelta(days=random.randint(1, 365))).date())
 
-class FundPerformance(models.Model):
-    performance_id = models.AutoField(primary_key=True)
-    fund = models.ForeignKey(Fund, on_delete=models.CASCADE, related_name="performances")
-    date = models.DateField()
-    net_asset_value = models.FloatField()
-    return_percentage = models.FloatField()
+            for date in dates:
+                try:
+                    StockPrice.objects.create(
+                        ticker_symbol=holding.ticker_symbol,
+                        date=date,
+                        open_price=round(random.uniform(50, 500), 2),
+                        close_price=round(random.uniform(50, 500), 2),
+                        high_price=round(random.uniform(50, 500), 2),
+                        low_price=round(random.uniform(50, 500), 2),
+                        volume=random.randint(10000, 1000000),
+                    )
+                except IntegrityError:
+                    continue
 
-    class Meta:
-        unique_together = ("fund", "date")
+        # --- Fund Performance ---
+        for fund in funds:
+            dates = set()
+            while len(dates) < 5:
+                dates.add((datetime.today() - timedelta(days=random.randint(30, 365))).date())
 
-    def __str__(self):
-        return f"{self.fund.name} performance on {self.date}"
+            for date in dates:
+                try:
+                    FundPerformance.objects.create(
+                        fund=fund,
+                        date=date,
+                        net_asset_value=round(random.uniform(1000000, 5000000), 2),
+                        return_percentage=round(random.uniform(-10, 20), 2),
+                    )
+                except IntegrityError:
+                    continue
 
-class PeerFund(models.Model):
-    peer_fund_id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=255)
-    strategy = models.CharField(max_length=255)
+        # --- Peer Funds ---
+        peer_funds = []
+        for _ in range(3):
+            peer = PeerFund.objects.create(
+                name=f"{fake.company()} Peer Fund",
+                strategy=random.choice(["Growth", "Value", "Balanced"]),
+            )
+            peer_funds.append(peer)
 
-    def __str__(self):
-        return self.name
+        # --- Peer Performance ---
+        for peer in peer_funds:
+            dates = set()
+            while len(dates) < 5:
+                dates.add((datetime.today() - timedelta(days=random.randint(30, 365))).date())
 
-class PeerPerformance(models.Model):
-    performance_id = models.AutoField(primary_key=True)
-    peer_fund = models.ForeignKey(PeerFund, on_delete=models.CASCADE, related_name="performances")
-    date = models.DateField()
-    net_asset_value = models.FloatField()
-    return_percentage = models.FloatField()
+            for date in dates:
+                try:
+                    PeerPerformance.objects.create(
+                        peer_fund=peer,
+                        date=date,
+                        net_asset_value=round(random.uniform(1000000, 5000000), 2),
+                        return_percentage=round(random.uniform(-10, 20), 2),
+                    )
+                except IntegrityError:
+                    continue
 
-    class Meta:
-        unique_together = ("peer_fund", "date")
+        self.stdout.write(self.style.SUCCESS("Database seeded successfully! ✅"))
+        self.stdout.write(self.style.SUCCESS(
+            "You can now navigate to /portfolio/holdings/<holding_id>/ or /portfolio/fund/<fund_id>/ to view details."
+        ))
 
-    def __str__(self):
-        return f"{self.peer_fund.name} performance on {self.date}"
+
+# from django.db import models
+
+# class PortfolioManager(models.Model):
+#     name = models.CharField(max_length=255)
+#     email = models.EmailField(unique=True)
+#     phone = models.CharField(max_length=20, blank=True, null=True)
+#     department = models.CharField(max_length=100, blank=True, null=True)
+#     funds_managed = models.PositiveIntegerField(default=0)
+
+#     def __str__(self):
+#         return self.name
+
+# class Fund(models.Model):
+#     fund_id = models.AutoField(primary_key=True)
+#     manager = models.ForeignKey(PortfolioManager, on_delete=models.CASCADE, related_name="funds")
+#     name = models.CharField(max_length=255)
+#     strategy = models.CharField(max_length=255)
+#     inception_date = models.DateField()
+
+#     def __str__(self):
+#         return self.name
+
+# class Holding(models.Model):
+#     holding_id = models.AutoField(primary_key=True)
+#     fund = models.ForeignKey(Fund, on_delete=models.CASCADE, related_name="holdings")
+#     ticker_symbol = models.CharField(max_length=10)
+#     shares = models.PositiveIntegerField()
+#     purchase_price = models.FloatField()
+#     purchase_date = models.DateField()
+#     logo_url = models.URLField(blank=True, null=True)
+
+#     def __str__(self):
+#         return f"{self.ticker_symbol} ({self.fund.name})"
+
+# class StockPrice(models.Model):
+#     ticker_symbol = models.CharField(max_length=10)
+#     date = models.DateField()
+#     open_price = models.FloatField()
+#     close_price = models.FloatField()
+#     high_price = models.FloatField()
+#     low_price = models.FloatField()
+#     volume = models.PositiveIntegerField()
+
+#     class Meta:
+#         unique_together = ("ticker_symbol", "date")
+
+#     def __str__(self):
+#         return f"{self.ticker_symbol} on {self.date}"
+
+# class FundPerformance(models.Model):
+#     performance_id = models.AutoField(primary_key=True)
+#     fund = models.ForeignKey(Fund, on_delete=models.CASCADE, related_name="performances")
+#     date = models.DateField()
+#     net_asset_value = models.FloatField()
+#     return_percentage = models.FloatField()
+
+#     class Meta:
+#         unique_together = ("fund", "date")
+
+#     def __str__(self):
+#         return f"{self.fund.name} performance on {self.date}"
+
+# class PeerFund(models.Model):
+#     peer_fund_id = models.AutoField(primary_key=True)
+#     name = models.CharField(max_length=255)
+#     strategy = models.CharField(max_length=255)
+
+#     def __str__(self):
+#         return self.name
+
+# class PeerPerformance(models.Model):
+#     performance_id = models.AutoField(primary_key=True)
+#     peer_fund = models.ForeignKey(PeerFund, on_delete=models.CASCADE, related_name="performances")
+#     date = models.DateField()
+#     net_asset_value = models.FloatField()
+#     return_percentage = models.FloatField()
+
+#     class Meta:
+#         unique_together = ("peer_fund", "date")
+
+#     def __str__(self):
+#         return f"{self.peer_fund.name} performance on {self.date}"
         
