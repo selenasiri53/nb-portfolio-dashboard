@@ -1,14 +1,5 @@
 from django.core.management.base import BaseCommand
 from django.db.utils import IntegrityError
-from portfolio.models import (
-    PortfolioManager,
-    Fund,
-    Holding,
-    StockPrice,
-    FundPerformance,
-    PeerFund,
-    PeerPerformance
-)
 from faker import Faker
 import random
 from datetime import datetime, timedelta
@@ -17,10 +8,22 @@ import yfinance as yf
 fake = Faker()
 
 class Command(BaseCommand):
-    help = "Seed the database with realistic portfolio data"
+    help = "Seed all portfolio data in correct order"
 
     def handle(self, *args, **kwargs):
+        # Import models here to avoid circular imports
+        from portfolio.models import (
+            PortfolioManager,
+            Fund,
+            Holding,
+            StockPrice,
+            FundPerformance,
+            PeerFund,
+            PeerPerformance
+        )
+
         self.stdout.write(self.style.WARNING("Clearing old data..."))
+        # Clear dependent data first
         PeerPerformance.objects.all().delete()
         PeerFund.objects.all().delete()
         FundPerformance.objects.all().delete()
@@ -31,7 +34,7 @@ class Command(BaseCommand):
 
         self.stdout.write(self.style.WARNING("Seeding new data..."))
 
-        # --- Portfolio Managers ---
+        # Portfolio Managers
         managers = []
         for _ in range(3):
             manager = PortfolioManager.objects.create(
@@ -43,7 +46,7 @@ class Command(BaseCommand):
             )
             managers.append(manager)
 
-        # --- Funds ---
+        # Funds
         funds = []
         for _ in range(5):
             fund = Fund.objects.create(
@@ -54,7 +57,7 @@ class Command(BaseCommand):
             )
             funds.append(fund)
 
-        # --- Holdings ---
+        # Holdings
         tickers = ["AAPL", "MSFT", "AMZN", "TSLA", "GOOG"]
         holdings = []
 
@@ -72,12 +75,11 @@ class Command(BaseCommand):
                 )
                 holdings.append(holding)
 
-        # --- Stock Prices (handle UNIQUE constraint) ---
+        # Stock Prices
         for holding in holdings:
             dates = set()
             while len(dates) < 5:
                 dates.add((datetime.today() - timedelta(days=random.randint(1, 365))).date())
-
             for date in dates:
                 try:
                     StockPrice.objects.create(
@@ -92,12 +94,11 @@ class Command(BaseCommand):
                 except IntegrityError:
                     continue
 
-        # --- Fund Performance ---
+        # Fund Performance
         for fund in funds:
             dates = set()
             while len(dates) < 5:
                 dates.add((datetime.today() - timedelta(days=random.randint(30, 365))).date())
-
             for date in dates:
                 try:
                     FundPerformance.objects.create(
@@ -109,7 +110,7 @@ class Command(BaseCommand):
                 except IntegrityError:
                     continue
 
-        # --- Peer Funds ---
+        # Peer Funds
         peer_funds = []
         for _ in range(3):
             peer = PeerFund.objects.create(
@@ -118,12 +119,11 @@ class Command(BaseCommand):
             )
             peer_funds.append(peer)
 
-        # --- Peer Performance ---
+        # Peer Performance
         for peer in peer_funds:
             dates = set()
             while len(dates) < 5:
                 dates.add((datetime.today() - timedelta(days=random.randint(30, 365))).date())
-
             for date in dates:
                 try:
                     PeerPerformance.objects.create(
@@ -139,88 +139,3 @@ class Command(BaseCommand):
         self.stdout.write(self.style.SUCCESS(
             "You can now navigate to /portfolio/holdings/<holding_id>/ or /portfolio/fund/<fund_id>/ to view details."
         ))
-
-
-# from django.db import models
-
-# class PortfolioManager(models.Model):
-#     name = models.CharField(max_length=255)
-#     email = models.EmailField(unique=True)
-#     phone = models.CharField(max_length=20, blank=True, null=True)
-#     department = models.CharField(max_length=100, blank=True, null=True)
-#     funds_managed = models.PositiveIntegerField(default=0)
-
-#     def __str__(self):
-#         return self.name
-
-# class Fund(models.Model):
-#     fund_id = models.AutoField(primary_key=True)
-#     manager = models.ForeignKey(PortfolioManager, on_delete=models.CASCADE, related_name="funds")
-#     name = models.CharField(max_length=255)
-#     strategy = models.CharField(max_length=255)
-#     inception_date = models.DateField()
-
-#     def __str__(self):
-#         return self.name
-
-# class Holding(models.Model):
-#     holding_id = models.AutoField(primary_key=True)
-#     fund = models.ForeignKey(Fund, on_delete=models.CASCADE, related_name="holdings")
-#     ticker_symbol = models.CharField(max_length=10)
-#     shares = models.PositiveIntegerField()
-#     purchase_price = models.FloatField()
-#     purchase_date = models.DateField()
-#     logo_url = models.URLField(blank=True, null=True)
-
-#     def __str__(self):
-#         return f"{self.ticker_symbol} ({self.fund.name})"
-
-# class StockPrice(models.Model):
-#     ticker_symbol = models.CharField(max_length=10)
-#     date = models.DateField()
-#     open_price = models.FloatField()
-#     close_price = models.FloatField()
-#     high_price = models.FloatField()
-#     low_price = models.FloatField()
-#     volume = models.PositiveIntegerField()
-
-#     class Meta:
-#         unique_together = ("ticker_symbol", "date")
-
-#     def __str__(self):
-#         return f"{self.ticker_symbol} on {self.date}"
-
-# class FundPerformance(models.Model):
-#     performance_id = models.AutoField(primary_key=True)
-#     fund = models.ForeignKey(Fund, on_delete=models.CASCADE, related_name="performances")
-#     date = models.DateField()
-#     net_asset_value = models.FloatField()
-#     return_percentage = models.FloatField()
-
-#     class Meta:
-#         unique_together = ("fund", "date")
-
-#     def __str__(self):
-#         return f"{self.fund.name} performance on {self.date}"
-
-# class PeerFund(models.Model):
-#     peer_fund_id = models.AutoField(primary_key=True)
-#     name = models.CharField(max_length=255)
-#     strategy = models.CharField(max_length=255)
-
-#     def __str__(self):
-#         return self.name
-
-# class PeerPerformance(models.Model):
-#     performance_id = models.AutoField(primary_key=True)
-#     peer_fund = models.ForeignKey(PeerFund, on_delete=models.CASCADE, related_name="performances")
-#     date = models.DateField()
-#     net_asset_value = models.FloatField()
-#     return_percentage = models.FloatField()
-
-#     class Meta:
-#         unique_together = ("peer_fund", "date")
-
-#     def __str__(self):
-#         return f"{self.peer_fund.name} performance on {self.date}"
-        

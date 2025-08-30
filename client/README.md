@@ -30,6 +30,21 @@ $ python manage.py runserver
 python manage.py seed portfolio --number=10
 <!-- python manage.py seed <app name> --number=<amount> -->
 
+<!-- To delete seeded data and start over: -->
+$ python manage.py shell
+
+% Run this inside the shell
+```
+from portfolio.models import PortfolioManager, Fund, Holding, StockPrice, FundPerformance
+
+# Delete all records in the correct order to avoid FK constraints
+StockPrice.objects.all().delete()
+FundPerformance.objects.all().delete()
+Holding.objects.all().delete()
+Fund.objects.all().delete()
+PortfolioManager.objects.all().delete()
+```
+
 # Connecting with the frontend:
 In the client folder:
 
