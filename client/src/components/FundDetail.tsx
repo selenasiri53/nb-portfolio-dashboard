@@ -14,7 +14,24 @@ const FundDetail = () => {
           <h1 className="text-sm font-thin">Return to funds</h1>
         </a>
         <div className="space-y-3">
-          <div className="lg:col-span-1 card rounded-2xl p-2 lg:p-4 bg-white min-h-screen overflow-scroll"></div>
+          <div className="lg:col-span-1 card rounded-2xl p-2 lg:p-4 bg-white min-h-screen overflow-scroll">
+        {/* Card with image and description for each stock */}
+        {/* holding_id
+          fund
+          ticker_symbol
+          shares
+          purchase_price
+          purchase_date
+          logo_url
+        */}
+        
+        {/* fund performance */}
+        {/* performance_id
+        fund
+        date
+        net_asset_value
+        return_percentage */}
+          </div>
         </div>
       </div>
     </div>
