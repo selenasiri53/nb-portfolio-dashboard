@@ -9,7 +9,7 @@ const fetchStockPrices = async () => {
 
 export const useStockPrices = () => {
     return useQuery({
-        queryKey: ['funds'],
+        queryKey: ['stock_price'],
         queryFn: fetchStockPrices,
         staleTime: STALE_TIME,
         gcTime: CACHE_TIME,
