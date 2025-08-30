@@ -1,27 +1,29 @@
-import random
 from django.core.management.base import BaseCommand
+from django.db.utils import IntegrityError
 from faker import Faker
+import random
+from datetime import datetime, timedelta
 import yfinance as yf
-
-from portfolio.models import (
-    PortfolioManager,
-    Fund,
-    Holding,
-    StockPrice,
-    FundPerformance,
-    PeerFund,
-    PeerPerformance,
-)
 
 fake = Faker()
 
 class Command(BaseCommand):
-    help = "Seed the database with sample portfolio, fund, holding, and stock data"
+    help = "Seed all portfolio data in correct order"
 
     def handle(self, *args, **kwargs):
-        self.stdout.write(self.style.NOTICE("Clearing old data..."))
+        # Import models here to avoid circular imports
+        from portfolio.models import (
+            PortfolioManager,
+            Fund,
+            Holding,
+            StockPrice,
+            FundPerformance,
+            PeerFund,
+            PeerPerformance
+        )
 
-        # Delete in correct order to avoid FK issues
+        self.stdout.write(self.style.WARNING("Clearing old data..."))
+        # Clear dependent data first
         PeerPerformance.objects.all().delete()
         PeerFund.objects.all().delete()
         FundPerformance.objects.all().delete()
@@ -30,89 +32,110 @@ class Command(BaseCommand):
         Fund.objects.all().delete()
         PortfolioManager.objects.all().delete()
 
-        self.stdout.write(self.style.SUCCESS("Database cleared."))
+        self.stdout.write(self.style.WARNING("Seeding new data..."))
 
-        # --- 1. Create Portfolio Managers ---
+        # Portfolio Managers
         managers = []
         for _ in range(3):
             manager = PortfolioManager.objects.create(
                 name=fake.name(),
-                email=fake.email(),
-                company=fake.company(),
+                email=fake.unique.email(),
+                phone=fake.phone_number(),
+                department=random.choice(["Equities", "Fixed Income", "Multi-Asset"]),
+                funds_managed=0,
             )
             managers.append(manager)
 
-        self.stdout.write(self.style.SUCCESS(f"Created {len(managers)} portfolio managers."))
-
-        # --- 2. Create Funds ---
+        # Funds
         funds = []
         for _ in range(5):
             fund = Fund.objects.create(
-                name=fake.catch_phrase(),
-                description=fake.paragraph(),
-                strategy=random.choice(["Growth", "Value", "Balanced"]),
                 manager=random.choice(managers),
+                name=f"{fake.company()} Growth Fund",
+                strategy=random.choice(["Growth", "Value", "Balanced"]),
+                inception_date=fake.date_between(start_date="-5y", end_date="today"),
             )
             funds.append(fund)
 
-        self.stdout.write(self.style.SUCCESS(f"Created {len(funds)} funds."))
-
-        # --- 3. Create Holdings from NYSE data ---
-        tickers = ["AAPL", "MSFT", "GOOGL", "TSLA", "AMZN", "NVDA", "META"]
+        # Holdings
+        tickers = ["AAPL", "MSFT", "AMZN", "TSLA", "GOOG"]
         holdings = []
 
         for fund in funds:
-            for symbol in random.sample(tickers, 3):
+            for ticker in tickers:
+                data = yf.Ticker(ticker).info
+                purchase_date = datetime.today() - timedelta(days=random.randint(30, 730))
                 holding = Holding.objects.create(
                     fund=fund,
-                    symbol=symbol,
-                    name=f"{symbol} Holding",
-                    shares=random.randint(10, 100),
-                    avg_price=round(random.uniform(100, 500), 2),
+                    ticker_symbol=ticker,
+                    shares=random.randint(10, 500),
+                    purchase_price=round(random.uniform(50, 500), 2),
+                    purchase_date=purchase_date.date(),
+                    logo_url=data.get("logo_url")
                 )
                 holdings.append(holding)
 
-                # Fetch stock price using yfinance
+        # Stock Prices
+        for holding in holdings:
+            dates = set()
+            while len(dates) < 5:
+                dates.add((datetime.today() - timedelta(days=random.randint(1, 365))).date())
+            for date in dates:
                 try:
-                    stock = yf.Ticker(symbol)
-                    price = stock.history(period="1d")["Close"].iloc[-1]
-                except Exception:
-                    price = round(random.uniform(100, 500), 2)
+                    StockPrice.objects.create(
+                        ticker_symbol=holding.ticker_symbol,
+                        date=date,
+                        open_price=round(random.uniform(50, 500), 2),
+                        close_price=round(random.uniform(50, 500), 2),
+                        high_price=round(random.uniform(50, 500), 2),
+                        low_price=round(random.uniform(50, 500), 2),
+                        volume=random.randint(10000, 1000000),
+                    )
+                except IntegrityError:
+                    continue
 
-                StockPrice.objects.create(
-                    holding=holding,
-                    price=price,
-                )
-
-        self.stdout.write(self.style.SUCCESS(f"Created {len(holdings)} holdings."))
-
-        # --- 4. Create Fund Performance ---
+        # Fund Performance
         for fund in funds:
-            FundPerformance.objects.create(
-                fund=fund,
-                ytd_return=round(random.uniform(-5, 15), 2),
-                one_year_return=round(random.uniform(-10, 25), 2),
-                five_year_return=round(random.uniform(0, 50), 2),
+            dates = set()
+            while len(dates) < 5:
+                dates.add((datetime.today() - timedelta(days=random.randint(30, 365))).date())
+            for date in dates:
+                try:
+                    FundPerformance.objects.create(
+                        fund=fund,
+                        date=date,
+                        net_asset_value=round(random.uniform(1000000, 5000000), 2),
+                        return_percentage=round(random.uniform(-10, 20), 2),
+                    )
+                except IntegrityError:
+                    continue
+
+        # Peer Funds
+        peer_funds = []
+        for _ in range(3):
+            peer = PeerFund.objects.create(
+                name=f"{fake.company()} Peer Fund",
+                strategy=random.choice(["Growth", "Value", "Balanced"]),
             )
+            peer_funds.append(peer)
 
-        self.stdout.write(self.style.SUCCESS("Added fund performance data."))
+        # Peer Performance
+        for peer in peer_funds:
+            dates = set()
+            while len(dates) < 5:
+                dates.add((datetime.today() - timedelta(days=random.randint(30, 365))).date())
+            for date in dates:
+                try:
+                    PeerPerformance.objects.create(
+                        peer_fund=peer,
+                        date=date,
+                        net_asset_value=round(random.uniform(1000000, 5000000), 2),
+                        return_percentage=round(random.uniform(-10, 20), 2),
+                    )
+                except IntegrityError:
+                    continue
 
-        # --- 5. Create Peer Funds & Performance ---
-        peers = []
-        for fund in funds:
-            for _ in range(2):
-                peer = PeerFund.objects.create(
-                    name=fake.company(),
-                    category=random.choice(["Tech", "Finance", "Energy"]),
-                )
-                peers.append(peer)
-
-                PeerPerformance.objects.create(
-                    peer_fund=peer,
-                    ytd_return=round(random.uniform(-5, 15), 2),
-                    one_year_return=round(random.uniform(-10, 25), 2),
-                )
-
-        self.stdout.write(self.style.SUCCESS("Added peer fund data."))
-
-        self.stdout.write(self.style.SUCCESS("🎉 Database seeding complete!"))
+        self.stdout.write(self.style.SUCCESS("Database seeded successfully! ✅"))
+        self.stdout.write(self.style.SUCCESS(
+            "You can now navigate to /portfolio/holdings/<holding_id>/ or /portfolio/fund/<fund_id>/ to view details."
+        ))

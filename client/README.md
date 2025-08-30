@@ -108,7 +108,7 @@ python manage.py seed portfolio --number=10
 <!-- To delete seeded data and start over: -->
 $ python manage.py shell
 
-% To clear DB - Run:
+% Run this inside the shell
 ```
 from portfolio.models import PortfolioManager, Fund, Holding, StockPrice, FundPerformance
 
