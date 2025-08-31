@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import Table from "@mui/joy/Table";
 import { Eye } from "lucide-react";
+import { CACHE_TIME, STALE_TIME } from "../../commons/constants";
 
 interface Fund {
   fund_id: number;
@@ -16,10 +17,12 @@ const getFunds = async () => {
   return res.json();
 };
 
-const YourFundsTable = () => {
+const FundsTable = () => {
   const { data, isLoading, error } = useQuery<Fund[]>({
     queryKey: ["funds"],
     queryFn: getFunds,
+    staleTime: STALE_TIME,
+    gcTime: CACHE_TIME,
   });
 
   if (isLoading) return <div>Loading...</div>;
@@ -64,4 +67,4 @@ const YourFundsTable = () => {
   );
 };
 
-export default YourFundsTable;
+export default FundsTable;
