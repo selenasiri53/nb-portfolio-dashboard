@@ -43,11 +43,8 @@ const Home = () => {
             </h3>
           </div>
           <div className="h-80 overflow-y-scroll">
-          <div className="lg:grid lg:grid-cols-3 space-y-3 lg:space-y-0 gap-4">
-            <div className="lg:col-span-1">
-            <FundsTableSection />
-            </div>
-            <div className="lg:col-span-2 rounded-2xl">
+          <div className="space-y-3 lg:space-y-0 gap-4">
+            <div className="rounded-2xl">
             <FundsTableSection />
             </div>
             </div>

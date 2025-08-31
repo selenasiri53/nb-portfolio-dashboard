@@ -16,7 +16,7 @@ function App() {
         <div className="lg:min-h-[88vh] border-[0.5px] border-neutral-500 rounded-4xl">
       <div className="lg:flex">
         {/* desktop */}
-        <div className="hidden lg:block">
+        <div className="hidden lg:block lg:min-h-[88vh]">
           <Navbar />
         </div>
         

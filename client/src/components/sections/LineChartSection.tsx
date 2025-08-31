@@ -25,36 +25,32 @@ interface PeerFund {
   peer_fund_id: number;
   name: string;
   strategy: string;
-  latest_performance?: PeerPerformance;
+  performances: PeerPerformance[];
 }
 
+// Fetch all peer funds
 const getPeerFunds = async (): Promise<PeerFund[]> => {
   const res = await fetch("http://127.0.0.1:8000/api/peer-funds");
   if (!res.ok) throw new Error("Failed to collect peer funds.");
 
-  const peerFunds: PeerFund[] = await res.json();
-
-  // Pick the most recent performance for each fund
-  return peerFunds.map((fund: any) => {
-    let latestPerformance: PeerPerformance | undefined;
-    if (fund.performances && fund.performances.length > 0) {
-      latestPerformance = fund.performances.reduce(
-        (latest: PeerPerformance, current: PeerPerformance) =>
-          new Date(current.date) > new Date(latest.date) ? current : latest,
-        fund.performances[0]
-      );
-    }
-
-    return {
-      peer_fund_id: fund.peer_fund_id,
-      name: fund.name,
-      strategy: fund.strategy,
-      latest_performance: latestPerformance,
-    };
-  });
+  const peerFunds: any[] = await res.json();
+  return peerFunds.map((fund) => ({
+    peer_fund_id: fund.peer_fund_id,
+    name: fund.name,
+    strategy: fund.strategy,
+    performances: fund.performances ?? [],
+  }));
 };
 
-// Main component
+const colors = [
+  "#fbbf24",
+  "#34d399",
+  "#60a5fa",
+  "#f87171",
+  "#a78bfa",
+  "#fcd34d",
+];
+
 const LineChartSection: React.FC = () => {
   const { data, isLoading, error } = useQuery({
     queryKey: ["peerData"],
@@ -65,22 +61,32 @@ const LineChartSection: React.FC = () => {
   if (error) return <div>Error fetching peer funds</div>;
   if (!data || data.length === 0) return <div>No peer fund data available</div>;
 
-  // Prepare Chart.js data
+  // Get all unique dates across all funds, sorted ascending
+  const allDates = Array.from(
+    new Set(data.flatMap((fund) => fund.performances.map((p) => p.date)))
+  ).sort((a, b) => new Date(a).getTime() - new Date(b).getTime());
+
+  // Build datasets: each fund is a separate line
+  const datasets = data.map((fund, index) => {
+    const fundData = allDates.map((date) => {
+      const perf = fund.performances.find((p) => p.date === date);
+      return perf ? perf.return_percentage : null; // null for missing dates
+    });
+
+    return {
+      label: fund.name,
+      data: fundData,
+      borderColor: colors[index % colors.length],
+      backgroundColor: colors[index % colors.length] + "33", // semi-transparent fill
+      fill: false,
+      tension: 0.3,
+      pointRadius: 4,
+    };
+  });
+
   const chartData = {
-    labels: data.map((fund) => fund.name), // fund names as labels
-    datasets: [
-      {
-        label: "Return %",
-        data: data.map((fund) => fund.latest_performance?.return_percentage ?? 0),
-        borderColor: "#fbbf24",
-        backgroundColor: "rgba(251, 191, 36, 0.3)",
-        fill: true,
-        tension: 0.4,
-        pointBackgroundColor: "#fff",
-        pointBorderColor: "#fbbf24",
-        pointRadius: 5,
-      },
-    ],
+    labels: allDates,
+    datasets: datasets,
   };
 
   const options: any = {
@@ -89,39 +95,24 @@ const LineChartSection: React.FC = () => {
     plugins: {
       legend: {
         position: "top",
-        labels: {
-          color: "#fff",
-          font: {
-            size: 14,
-            family: "Inter, sans-serif",
-          },
-        },
+        labels: { color: "#fff", font: { size: 14, family: "Inter, sans-serif" } },
       },
       title: {
         display: true,
-        text: "Peer Performance Comparison",
+        text: "Peer Performance Over Time",
         color: "#fff",
-        font: {
-          size: 18,
-          weight: "bold",
-        },
+        font: { size: 18, weight: "bold" },
       },
     },
     scales: {
-      x: {
-        grid: { color: "rgba(255,255,255,0.1)" },
-        ticks: { color: "#fff" },
-      },
-      y: {
-        grid: { color: "rgba(255,255,255,0.1)" },
-        ticks: { color: "#fff" },
-      },
+      x: { grid: { color: "rgba(255,255,255,0.1)" }, ticks: { color: "#fff" } },
+      y: { grid: { color: "rgba(255,255,255,0.1)" }, ticks: { color: "#fff" } },
     },
   };
 
   return (
     <div>
-      <div className="card rounded-2xl p-6 bg-[#0a1f44] shadow-lg h-80">
+      <div className="card rounded-2xl p-6 bg-[#0a1f44] shadow-lg h-96">
         <Line data={chartData} options={options} />
       </div>
     </div>

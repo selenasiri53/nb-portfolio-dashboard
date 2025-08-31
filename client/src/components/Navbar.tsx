@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { LayoutDashboard, TrendingUp } from "lucide-react";
+import { LayoutDashboard } from "lucide-react";
 import Tooltip from "@mui/joy/Tooltip";
 
 const Navbar = () => {
@@ -12,16 +12,6 @@ const Navbar = () => {
           className="hover:bg-neutral-200 p-3 rounded-2xl flex justify-center items-center"
         >
           <LayoutDashboard size={24} />
-        </Link>
-      </Tooltip>
-
-      {/* Fund detail */}
-      <Tooltip title="Funds" placement="left" variant="soft">
-        <Link
-          to="/funds"
-          className="hover:bg-neutral-200 p-3 rounded-2xl flex justify-center items-center"
-        >
-          <TrendingUp size={24} />
         </Link>
       </Tooltip>
     </div>
