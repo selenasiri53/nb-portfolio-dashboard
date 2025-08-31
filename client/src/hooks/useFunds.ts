@@ -3,9 +3,14 @@ import { CACHE_TIME, STALE_TIME } from '../commons/constants';
 
 // `${BASE_URL}/stock-prices`
 const fetchFunds = async () => {
-    const res = await fetch('/portfolio-data/');
+    const res = await fetch('/api/funds');
     if (!res.ok) throw new Error('Could not retrieve funds.');
-    return res.json(); 
+
+
+    const data = await res.json();
+    console.log("Fetched funds:", data); 
+    return data;
+    // return res.json(); 
   };
 
 export const useFunds = () => {

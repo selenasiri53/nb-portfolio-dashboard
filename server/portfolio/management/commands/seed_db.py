@@ -36,7 +36,7 @@ class Command(BaseCommand):
 
         # Portfolio Managers
         managers = []
-        for _ in range(3):
+        for _ in range(2):
             manager = PortfolioManager.objects.create(
                 name=fake.name(),
                 email=fake.unique.email(),
@@ -48,7 +48,7 @@ class Command(BaseCommand):
 
         # Funds
         funds = []
-        for _ in range(5):
+        for _ in range(3):
             fund = Fund.objects.create(
                 manager=random.choice(managers),
                 name=f"{fake.company()} Growth Fund",
@@ -59,7 +59,7 @@ class Command(BaseCommand):
 
         # Holdings
         tickers = ["AAPL", "MSFT", "AMZN", "TSLA", "GOOG"]
-        holdings = []
+        holdings = [5]
 
         for fund in funds:
             for ticker in tickers:
