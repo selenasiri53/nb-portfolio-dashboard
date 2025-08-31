@@ -1,0 +1,177 @@
+[
+    {
+      "performance_id": 1,
+      "date": "2025-08-31",
+      "net_asset_value": 2215838.58,
+      "return_percentage": -3.28,
+      "fund": 1
+    },
+    {
+      "performance_id": 2,
+      "date": "2025-08-01",
+      "net_asset_value": 3301664.88,
+      "return_percentage": 9.93,
+      "fund": 1
+    },
+    {
+      "performance_id": 3,
+      "date": "2025-07-02",
+      "net_asset_value": 2231054.25,
+      "return_percentage": 14.94,
+      "fund": 1
+    },
+    {
+      "performance_id": 4,
+      "date": "2025-06-02",
+      "net_asset_value": 4627075.73,
+      "return_percentage": 14.57,
+      "fund": 1
+    },
+    {
+      "performance_id": 5,
+      "date": "2025-05-03",
+      "net_asset_value": 3900150.55,
+      "return_percentage": 0.02,
+      "fund": 1
+    },
+    {
+      "performance_id": 6,
+      "date": "2025-08-31",
+      "net_asset_value": 2027031.4,
+      "return_percentage": 1.02,
+      "fund": 2
+    },
+    {
+      "performance_id": 7,
+      "date": "2025-08-01",
+      "net_asset_value": 3049421.17,
+      "return_percentage": 12.07,
+      "fund": 2
+    },
+    {
+      "performance_id": 8,
+      "date": "2025-07-02",
+      "net_asset_value": 3892710.43,
+      "return_percentage": -6.32,
+      "fund": 2
+    },
+    {
+      "performance_id": 9,
+      "date": "2025-06-02",
+      "net_asset_value": 4677597.73,
+      "return_percentage": 19.42,
+      "fund": 2
+    },
+    {
+      "performance_id": 10,
+      "date": "2025-05-03",
+      "net_asset_value": 2888710.62,
+      "return_percentage": -4.03,
+      "fund": 2
+    },
+    {
+      "performance_id": 11,
+      "date": "2025-08-31",
+      "net_asset_value": 3431657.8,
+      "return_percentage": -0.74,
+      "fund": 3
+    },
+    {
+      "performance_id": 12,
+      "date": "2025-08-01",
+      "net_asset_value": 1651979.82,
+      "return_percentage": -2.84,
+      "fund": 3
+    },
+    {
+      "performance_id": 13,
+      "date": "2025-07-02",
+      "net_asset_value": 3484635.23,
+      "return_percentage": -5.51,
+      "fund": 3
+    },
+    {
+      "performance_id": 14,
+      "date": "2025-06-02",
+      "net_asset_value": 4152508.39,
+      "return_percentage": -9.86,
+      "fund": 3
+    },
+    {
+      "performance_id": 15,
+      "date": "2025-05-03",
+      "net_asset_value": 4581642.01,
+      "return_percentage": 7.07,
+      "fund": 3
+    },
+    {
+      "performance_id": 16,
+      "date": "2025-08-31",
+      "net_asset_value": 3073909,
+      "return_percentage": 17.61,
+      "fund": 4
+    },
+    {
+      "performance_id": 17,
+      "date": "2025-08-01",
+      "net_asset_value": 2804405.28,
+      "return_percentage": 15.47,
+      "fund": 4
+    },
+    {
+      "performance_id": 18,
+      "date": "2025-07-02",
+      "net_asset_value": 1351339.58,
+      "return_percentage": 12,
+      "fund": 4
+    },
+    {
+      "performance_id": 19,
+      "date": "2025-06-02",
+      "net_asset_value": 3091142.5,
+      "return_percentage": 17.83,
+      "fund": 4
+    },
+    {
+      "performance_id": 20,
+      "date": "2025-05-03",
+      "net_asset_value": 1272829.09,
+      "return_percentage": 10.28,
+      "fund": 4
+    },
+    {
+      "performance_id": 21,
+      "date": "2025-08-31",
+      "net_asset_value": 1798530.81,
+      "return_percentage": -1.77,
+      "fund": 5
+    },
+    {
+      "performance_id": 22,
+      "date": "2025-08-01",
+      "net_asset_value": 1469761.4,
+      "return_percentage": 19.59,
+      "fund": 5
+    },
+    {
+      "performance_id": 23,
+      "date": "2025-07-02",
+      "net_asset_value": 4827941.45,
+      "return_percentage": 8.66,
+      "fund": 5
+    },
+    {
+      "performance_id": 24,
+      "date": "2025-06-02",
+      "net_asset_value": 1460674.28,
+      "return_percentage": 19.85,
+      "fund": 5
+    },
+    {
+      "performance_id": 25,
+      "date": "2025-05-03",
+      "net_asset_value": 1799855.6,
+      "return_percentage": 5.41,
+      "fund": 5
+    }
+  ]

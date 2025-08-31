@@ -1,3 +1,5 @@
+// collect data for manager 2
+
 import { useQuery } from "@tanstack/react-query";
 import Table from "@mui/joy/Table";
 import { Eye } from "lucide-react";

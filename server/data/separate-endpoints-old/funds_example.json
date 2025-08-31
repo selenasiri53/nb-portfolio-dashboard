@@ -1,0 +1,37 @@
+[
+    {
+      "fund_id": 1,
+      "name": "Tech Growth Fund",
+      "strategy": "Growth",
+      "inception_date": "2020-09-01",
+      "manager": 3
+    },
+    {
+      "fund_id": 2,
+      "name": "Global Value Fund",
+      "strategy": "Value",
+      "inception_date": "2020-09-01",
+      "manager": 2
+    },
+    {
+      "fund_id": 3,
+      "name": "Balanced Opportunities",
+      "strategy": "Balanced",
+      "inception_date": "2020-09-01",
+      "manager": 2
+    },
+    {
+      "fund_id": 4,
+      "name": "Sustainable Equity Fund",
+      "strategy": "Growth",
+      "inception_date": "2019-09-02",
+      "manager": 2
+    },
+    {
+      "fund_id": 5,
+      "name": "High Yield Fund",
+      "strategy": "Fixed Income",
+      "inception_date": "2023-09-01",
+      "manager": 1
+    }
+  ]

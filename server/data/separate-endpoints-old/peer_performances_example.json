@@ -1,0 +1,65 @@
+[
+    {
+      "performance_id": 1,
+      "date": "2025-08-31",
+      "net_asset_value": 3404241.36,
+      "return_percentage": -7.67,
+      "peer_fund": 1
+    },
+    {
+      "performance_id": 2,
+      "date": "2025-08-01",
+      "net_asset_value": 2064197.62,
+      "return_percentage": -9.92,
+      "peer_fund": 1
+    },
+    {
+      "performance_id": 3,
+      "date": "2025-07-02",
+      "net_asset_value": 1956135.88,
+      "return_percentage": -9.96,
+      "peer_fund": 1
+    },
+    {
+      "performance_id": 4,
+      "date": "2025-08-31",
+      "net_asset_value": 2070648.63,
+      "return_percentage": -2.34,
+      "peer_fund": 2
+    },
+    {
+      "performance_id": 5,
+      "date": "2025-08-01",
+      "net_asset_value": 4241418.1,
+      "return_percentage": -1.98,
+      "peer_fund": 2
+    },
+    {
+      "performance_id": 6,
+      "date": "2025-07-02",
+      "net_asset_value": 3784569.54,
+      "return_percentage": 1.1,
+      "peer_fund": 2
+    },
+    {
+      "performance_id": 7,
+      "date": "2025-08-31",
+      "net_asset_value": 4770172.32,
+      "return_percentage": 0.52,
+      "peer_fund": 3
+    },
+    {
+      "performance_id": 8,
+      "date": "2025-08-01",
+      "net_asset_value": 1593907.65,
+      "return_percentage": -1.17,
+      "peer_fund": 3
+    },
+    {
+      "performance_id": 9,
+      "date": "2025-07-02",
+      "net_asset_value": 1119996.47,
+      "return_percentage": 13.05,
+      "peer_fund": 3
+    }
+  ]

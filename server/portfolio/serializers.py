@@ -9,111 +9,52 @@ from .models import (
     PeerPerformance
 )
 
-class PortfolioManagerSerializer(serializers.ModelSerializer):
+# Order: the 'many' table must appear first, so python will know which serializer it is.
+# Fund has many fundperformances and holdings
+class FundPerformanceSerializer(serializers.ModelSerializer):
     class Meta:
-        model = PortfolioManager
-        fields = "__all__"
-
-class FundSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Fund
-        fields = "__all__"
+        model = FundPerformance
+        fields = ["performance_id", "date", "net_asset_value", "return_percentage"]
 
 class HoldingSerializer(serializers.ModelSerializer):
     class Meta:
         model = Holding
-        fields = "__all__"
+        fields = ["holding_id", "ticker_symbol", "shares", "purchase_price", "purchase_date", "logo_url"]
 
+# portfoliomanager has many funds
+class FundSerializer(serializers.ModelSerializer):
+    performances = FundPerformanceSerializer(many=True, read_only=True)
+    holdings = HoldingSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = Fund
+        fields = ["fund_id", "name", "strategy", "inception_date", "performances", "holdings"] 
+        # use 'related_name' on the related 'many' table as a field
+
+class PortfolioManagerSerializer(serializers.ModelSerializer):
+    funds = FundSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = PortfolioManager
+        fields = ["id", "name", "email", "phone", "department", "funds_managed", "funds"]
+
+# stockprice is independent
 class StockPriceSerializer(serializers.ModelSerializer):
     class Meta:
         model = StockPrice
-        fields = "__all__"
+        fields = ["ticker_symbol", "date", "open_price", "close_price", "high_price", "low_price", "volume"]
+        unique_together = ('ticker_symbol', 'date')
 
-class FundPerformanceSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = FundPerformance
-        fields = "__all__"
-
-class PeerFundSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = PeerFund
-        fields = "__all__"
-
+# peerfund has many performances
 class PeerPerformanceSerializer(serializers.ModelSerializer):
     class Meta:
         model = PeerPerformance
-        fields = "__all__"
+        fields = ["performance_id", "date", "net_asset_value", "return_percentage"]
+        unique_together = ('peer_fund', 'date')
 
-# from rest_framework import serializers
-# from .models import (
-#     PortfolioManager,
-#     Fund,
-#     Holding,
-#     StockPrice,
-#     FundPerformance,
-#     PeerFund,
-#     PeerPerformance,
-# )
+class PeerFundSerializer(serializers.ModelSerializer):
+    performances = PeerPerformanceSerializer(many=True, read_only=True)
 
-
-# class StockPriceSerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model = StockPrice
-#         fields = "__all__"
-
-
-# class FundPerformanceSerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model = FundPerformance
-#         fields = "__all__"
-
-
-# class PeerPerformanceSerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model = PeerPerformance
-#         fields = "__all__"
-
-
-# class PeerFundSerializer(serializers.ModelSerializer):
-#     performances = PeerPerformanceSerializer(many=True, read_only=True)
-
-#     class Meta:
-#         model = PeerFund
-#         fields = "__all__"
-
-
-# class HoldingSerializer(serializers.ModelSerializer):
-#     stock_prices = StockPriceSerializer(source="stockprice_set", many=True, read_only=True)
-
-#     class Meta:
-#         model = Holding
-#         fields = "__all__"
-
-
-# class FundSerializer(serializers.ModelSerializer):
-#     holdings = HoldingSerializer(many=True, read_only=True)
-#     performances = FundPerformanceSerializer(many=True, read_only=True)
-
-#     class Meta:
-#         model = Fund
-#         fields = "__all__"
-
-
-# class PortfolioManagerSerializer(serializers.ModelSerializer):
-#     funds = FundSerializer(many=True, read_only=True)
-
-#     class Meta:
-#         model = PortfolioManager
-#         fields = "__all__"
-
-
-# class PortfolioDataSerializer(serializers.Serializer):
-#     """Giant serializer to return everything in one API call"""
-
-#     managers = PortfolioManagerSerializer(many=True)
-#     funds = FundSerializer(many=True)
-#     holdings = HoldingSerializer(many=True)
-#     stock_prices = StockPriceSerializer(many=True)
-#     fund_performances = FundPerformanceSerializer(many=True)
-#     peer_funds = PeerFundSerializer(many=True)
-#     peer_performances = PeerPerformanceSerializer(many=True)
+    class Meta:
+        model = PeerFund
+        fields = ["peer_fund_id", "name", "strategy", "performances"]

@@ -1,0 +1,432 @@
+[
+    {
+      "id": 1,
+      "name": "Alice Johnson",
+      "email": "alice.johnson@funds.com",
+      "phone": "888-555-1234",
+      "department": "Fixed Income",
+      "funds_managed": 0,
+      "funds": [
+        {
+          "fund_id": 5,
+          "name": "High Yield Fund",
+          "strategy": "Fixed Income",
+          "inception_date": "2023-09-01",
+          "performances": [
+            {
+              "performance_id": 21,
+              "date": "2025-08-31",
+              "net_asset_value": 1798530.81,
+              "return_percentage": -1.77
+            },
+            {
+              "performance_id": 22,
+              "date": "2025-08-01",
+              "net_asset_value": 1469761.4,
+              "return_percentage": 19.59
+            },
+            {
+              "performance_id": 23,
+              "date": "2025-07-02",
+              "net_asset_value": 4827941.45,
+              "return_percentage": 8.66
+            },
+            {
+              "performance_id": 24,
+              "date": "2025-06-02",
+              "net_asset_value": 1460674.28,
+              "return_percentage": 19.85
+            },
+            {
+              "performance_id": 25,
+              "date": "2025-05-03",
+              "net_asset_value": 1799855.6,
+              "return_percentage": 5.41
+            }
+          ],
+          "holdings": [
+            {
+              "holding_id": 21,
+              "ticker_symbol": "AAPL",
+              "shares": 360,
+              "purchase_price": 316.27,
+              "purchase_date": "2024-05-02",
+              "logo_url": null
+            },
+            {
+              "holding_id": 22,
+              "ticker_symbol": "MSFT",
+              "shares": 204,
+              "purchase_price": 241.49,
+              "purchase_date": "2024-11-30",
+              "logo_url": null
+            },
+            {
+              "holding_id": 23,
+              "ticker_symbol": "AMZN",
+              "shares": 472,
+              "purchase_price": 471.68,
+              "purchase_date": "2024-08-06",
+              "logo_url": null
+            },
+            {
+              "holding_id": 24,
+              "ticker_symbol": "TSLA",
+              "shares": 358,
+              "purchase_price": 93.48,
+              "purchase_date": "2024-04-21",
+              "logo_url": null
+            },
+            {
+              "holding_id": 25,
+              "ticker_symbol": "GOOG",
+              "shares": 98,
+              "purchase_price": 405.43,
+              "purchase_date": "2025-05-31",
+              "logo_url": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Bob Smith",
+      "email": "bob.smith@funds.com",
+      "phone": "888-555-1234",
+      "department": "Multi-Asset",
+      "funds_managed": 0,
+      "funds": [
+        {
+          "fund_id": 2,
+          "name": "Global Value Fund",
+          "strategy": "Value",
+          "inception_date": "2020-09-01",
+          "performances": [
+            {
+              "performance_id": 6,
+              "date": "2025-08-31",
+              "net_asset_value": 2027031.4,
+              "return_percentage": 1.02
+            },
+            {
+              "performance_id": 7,
+              "date": "2025-08-01",
+              "net_asset_value": 3049421.17,
+              "return_percentage": 12.07
+            },
+            {
+              "performance_id": 8,
+              "date": "2025-07-02",
+              "net_asset_value": 3892710.43,
+              "return_percentage": -6.32
+            },
+            {
+              "performance_id": 9,
+              "date": "2025-06-02",
+              "net_asset_value": 4677597.73,
+              "return_percentage": 19.42
+            },
+            {
+              "performance_id": 10,
+              "date": "2025-05-03",
+              "net_asset_value": 2888710.62,
+              "return_percentage": -4.03
+            }
+          ],
+          "holdings": [
+            {
+              "holding_id": 6,
+              "ticker_symbol": "AAPL",
+              "shares": 477,
+              "purchase_price": 453.91,
+              "purchase_date": "2025-04-24",
+              "logo_url": null
+            },
+            {
+              "holding_id": 7,
+              "ticker_symbol": "MSFT",
+              "shares": 326,
+              "purchase_price": 54.1,
+              "purchase_date": "2024-04-01",
+              "logo_url": null
+            },
+            {
+              "holding_id": 8,
+              "ticker_symbol": "AMZN",
+              "shares": 89,
+              "purchase_price": 489.51,
+              "purchase_date": "2025-04-12",
+              "logo_url": null
+            },
+            {
+              "holding_id": 9,
+              "ticker_symbol": "TSLA",
+              "shares": 440,
+              "purchase_price": 234.73,
+              "purchase_date": "2024-06-15",
+              "logo_url": null
+            },
+            {
+              "holding_id": 10,
+              "ticker_symbol": "GOOG",
+              "shares": 150,
+              "purchase_price": 167.72,
+              "purchase_date": "2024-06-11",
+              "logo_url": null
+            }
+          ]
+        },
+        {
+          "fund_id": 3,
+          "name": "Balanced Opportunities",
+          "strategy": "Balanced",
+          "inception_date": "2020-09-01",
+          "performances": [
+            {
+              "performance_id": 11,
+              "date": "2025-08-31",
+              "net_asset_value": 3431657.8,
+              "return_percentage": -0.74
+            },
+            {
+              "performance_id": 12,
+              "date": "2025-08-01",
+              "net_asset_value": 1651979.82,
+              "return_percentage": -2.84
+            },
+            {
+              "performance_id": 13,
+              "date": "2025-07-02",
+              "net_asset_value": 3484635.23,
+              "return_percentage": -5.51
+            },
+            {
+              "performance_id": 14,
+              "date": "2025-06-02",
+              "net_asset_value": 4152508.39,
+              "return_percentage": -9.86
+            },
+            {
+              "performance_id": 15,
+              "date": "2025-05-03",
+              "net_asset_value": 4581642.01,
+              "return_percentage": 7.07
+            }
+          ],
+          "holdings": [
+            {
+              "holding_id": 11,
+              "ticker_symbol": "AAPL",
+              "shares": 291,
+              "purchase_price": 299.51,
+              "purchase_date": "2023-10-05",
+              "logo_url": null
+            },
+            {
+              "holding_id": 12,
+              "ticker_symbol": "MSFT",
+              "shares": 470,
+              "purchase_price": 228.89,
+              "purchase_date": "2024-05-17",
+              "logo_url": null
+            },
+            {
+              "holding_id": 13,
+              "ticker_symbol": "AMZN",
+              "shares": 458,
+              "purchase_price": 217.06,
+              "purchase_date": "2023-09-21",
+              "logo_url": null
+            },
+            {
+              "holding_id": 14,
+              "ticker_symbol": "TSLA",
+              "shares": 274,
+              "purchase_price": 140.21,
+              "purchase_date": "2025-02-24",
+              "logo_url": null
+            },
+            {
+              "holding_id": 15,
+              "ticker_symbol": "GOOG",
+              "shares": 168,
+              "purchase_price": 438.19,
+              "purchase_date": "2024-02-18",
+              "logo_url": null
+            }
+          ]
+        },
+        {
+          "fund_id": 4,
+          "name": "Sustainable Equity Fund",
+          "strategy": "Growth",
+          "inception_date": "2019-09-02",
+          "performances": [
+            {
+              "performance_id": 16,
+              "date": "2025-08-31",
+              "net_asset_value": 3073909,
+              "return_percentage": 17.61
+            },
+            {
+              "performance_id": 17,
+              "date": "2025-08-01",
+              "net_asset_value": 2804405.28,
+              "return_percentage": 15.47
+            },
+            {
+              "performance_id": 18,
+              "date": "2025-07-02",
+              "net_asset_value": 1351339.58,
+              "return_percentage": 12
+            },
+            {
+              "performance_id": 19,
+              "date": "2025-06-02",
+              "net_asset_value": 3091142.5,
+              "return_percentage": 17.83
+            },
+            {
+              "performance_id": 20,
+              "date": "2025-05-03",
+              "net_asset_value": 1272829.09,
+              "return_percentage": 10.28
+            }
+          ],
+          "holdings": [
+            {
+              "holding_id": 16,
+              "ticker_symbol": "AAPL",
+              "shares": 35,
+              "purchase_price": 236.13,
+              "purchase_date": "2024-08-02",
+              "logo_url": null
+            },
+            {
+              "holding_id": 17,
+              "ticker_symbol": "MSFT",
+              "shares": 194,
+              "purchase_price": 430.55,
+              "purchase_date": "2023-11-17",
+              "logo_url": null
+            },
+            {
+              "holding_id": 18,
+              "ticker_symbol": "AMZN",
+              "shares": 95,
+              "purchase_price": 65.8,
+              "purchase_date": "2024-08-08",
+              "logo_url": null
+            },
+            {
+              "holding_id": 19,
+              "ticker_symbol": "TSLA",
+              "shares": 306,
+              "purchase_price": 162.6,
+              "purchase_date": "2025-05-01",
+              "logo_url": null
+            },
+            {
+              "holding_id": 20,
+              "ticker_symbol": "GOOG",
+              "shares": 172,
+              "purchase_price": 187.4,
+              "purchase_date": "2023-10-16",
+              "logo_url": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Charlie Williams",
+      "email": "charlie.williams@funds.com",
+      "phone": "888-555-1234",
+      "department": "Multi-Asset",
+      "funds_managed": 0,
+      "funds": [
+        {
+          "fund_id": 1,
+          "name": "Tech Growth Fund",
+          "strategy": "Growth",
+          "inception_date": "2020-09-01",
+          "performances": [
+            {
+              "performance_id": 1,
+              "date": "2025-08-31",
+              "net_asset_value": 2215838.58,
+              "return_percentage": -3.28
+            },
+            {
+              "performance_id": 2,
+              "date": "2025-08-01",
+              "net_asset_value": 3301664.88,
+              "return_percentage": 9.93
+            },
+            {
+              "performance_id": 3,
+              "date": "2025-07-02",
+              "net_asset_value": 2231054.25,
+              "return_percentage": 14.94
+            },
+            {
+              "performance_id": 4,
+              "date": "2025-06-02",
+              "net_asset_value": 4627075.73,
+              "return_percentage": 14.57
+            },
+            {
+              "performance_id": 5,
+              "date": "2025-05-03",
+              "net_asset_value": 3900150.55,
+              "return_percentage": 0.02
+            }
+          ],
+          "holdings": [
+            {
+              "holding_id": 1,
+              "ticker_symbol": "AAPL",
+              "shares": 278,
+              "purchase_price": 421.89,
+              "purchase_date": "2024-06-03",
+              "logo_url": null
+            },
+            {
+              "holding_id": 2,
+              "ticker_symbol": "MSFT",
+              "shares": 192,
+              "purchase_price": 458.55,
+              "purchase_date": "2023-10-29",
+              "logo_url": null
+            },
+            {
+              "holding_id": 3,
+              "ticker_symbol": "AMZN",
+              "shares": 477,
+              "purchase_price": 300.56,
+              "purchase_date": "2023-12-20",
+              "logo_url": null
+            },
+            {
+              "holding_id": 4,
+              "ticker_symbol": "TSLA",
+              "shares": 218,
+              "purchase_price": 258.54,
+              "purchase_date": "2024-05-28",
+              "logo_url": null
+            },
+            {
+              "holding_id": 5,
+              "ticker_symbol": "GOOG",
+              "shares": 31,
+              "purchase_price": 394.56,
+              "purchase_date": "2024-09-28",
+              "logo_url": null
+            }
+          ]
+        }
+      ]
+    }
+  ]

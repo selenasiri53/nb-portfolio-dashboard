@@ -1,0 +1,26 @@
+[
+    {
+      "id": 1,
+      "name": "Alice Johnson",
+      "email": "alice.johnson@funds.com",
+      "phone": "888-555-1234",
+      "department": "Fixed Income",
+      "funds_managed": 0
+    },
+    {
+      "id": 2,
+      "name": "Bob Smith",
+      "email": "bob.smith@funds.com",
+      "phone": "888-555-1234",
+      "department": "Multi-Asset",
+      "funds_managed": 0
+    },
+    {
+      "id": 3,
+      "name": "Charlie Williams",
+      "email": "charlie.williams@funds.com",
+      "phone": "888-555-1234",
+      "department": "Multi-Asset",
+      "funds_managed": 0
+    }
+  ]

@@ -1,0 +1,17 @@
+[
+    {
+      "peer_fund_id": 1,
+      "name": "Peer Growth Fund",
+      "strategy": "Growth"
+    },
+    {
+      "peer_fund_id": 2,
+      "name": "Peer Value Fund",
+      "strategy": "Value"
+    },
+    {
+      "peer_fund_id": 3,
+      "name": "Peer Balanced Fund",
+      "strategy": "Balanced"
+    }
+  ]
