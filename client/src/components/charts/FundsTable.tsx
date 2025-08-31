@@ -14,9 +14,17 @@ interface Fund {
 }
 
 const getFunds = async () => {
-  const res = await fetch("http://127.0.0.1:8000/api/funds");
+  const res = await fetch("http://127.0.0.1:8000/api/portfolio-managers/2"); // manager 2
   if (!res.ok) throw new Error("Could not retrieve funds.");
-  return res.json();
+  const managerData = await res.json();
+  // return only the funds array
+  return managerData.funds.map((fund: any) => ({
+    fund_id: fund.fund_id,
+    name: fund.name,
+    strategy: fund.strategy,
+    inception_date: fund.inception_date,
+    manager: managerData.id, // optional: attach manager id if needed
+  }));
 };
 
 const FundsTable = () => {
