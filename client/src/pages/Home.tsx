@@ -11,7 +11,7 @@ const Home = () => {
           Dashboard Analytics
         </h1>
         <h3 className="text-sm font-thin text-indigo-200 pb-3">
-          Your top stocks increased 12% this week
+          See performances of similar funds
         </h3>
         <div className="space-y-3">
           {/* <QuadraCardSection /> */}

@@ -1,4 +1,4 @@
-// Retrieve fund detail by pk - 
+// select dropdown - select peer fund, see 
 
 import {
     Chart as ChartJS,
