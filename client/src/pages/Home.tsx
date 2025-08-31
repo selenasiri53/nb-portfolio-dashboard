@@ -38,7 +38,7 @@ const Home = () => {
               View details for each fund
             </h3>
           </div>
-          <div className="h-80 overflow-y-scroll">
+          <div className="overflow-y-scroll">
           <div className="space-y-3 lg:space-y-0 gap-4">
             <div className="rounded-2xl">
             <FundsTableSection />
