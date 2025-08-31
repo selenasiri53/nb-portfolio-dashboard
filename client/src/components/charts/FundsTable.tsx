@@ -23,7 +23,7 @@ const getFunds = async () => {
     name: fund.name,
     strategy: fund.strategy,
     inception_date: fund.inception_date,
-    manager: managerData.id, // optional: attach manager id if needed
+    // manager: managerData.id, 
   }));
 };
 
@@ -50,7 +50,7 @@ const FundsTable = () => {
             <th style={{ width: "35%" }}>Fund</th>
             <th style={{ width: "20%" }}>Strategy</th>
             <th style={{ width: "20%" }}>Inception Date</th>
-            <th style={{ width: "15%" }}>Manager</th>
+            {/* <th style={{ width: "15%" }}>Manager</th> */}
             <th style={{ width: "10%" }}>View</th>
           </tr>
         </thead>
@@ -63,7 +63,7 @@ const FundsTable = () => {
               <td>{fund.name}</td>
               <td>{fund.strategy}</td>
               <td>{new Date(fund.inception_date).toLocaleDateString()}</td>
-              <td>{fund.manager}</td>
+              {/* <td>{fund.manager}</td> */}
               <td>
                 <a href={`/fund-detail/${fund.fund_id}`}>
                   <Eye size={18} />
