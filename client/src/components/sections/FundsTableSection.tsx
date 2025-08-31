@@ -1,4 +1,4 @@
-import YourFundsTable from '../charts/FundsTable'
+import YourFundsTable from './FundsTable'
 
 const FundsTableSection = () => {
 

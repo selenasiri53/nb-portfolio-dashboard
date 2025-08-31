@@ -1,3 +1,19 @@
+# Overview
+nb-portfolio-dashboard
+
+This is a simple, single-page financial management dashboard designed for an account manager to quickly view their funds, fund details (including holdings and fund performances), and how they compare with peer funds.
+
+This dashboard layout demonstrates its proof of concept, using bar charts, line graphs, and comparison tables to visualize the data. While there is potential to expand with additional graphs and comparisons, this project provides a focused showcase of the types of diagrams and insights that can be generated from a manager’s funds and their performance relative to similar funds in the market.
+
+The model relationships are structured in 3 major trees (see json files in client/.../data/current):
+1. managers > funds > each fund has several holdings and fund_performances
+2. stock_prices - standalone model
+3. peer_funds > each peer_fund has many peer_performances
+
+Database Seeding:
+To seed the database with example data, run:
+python manage.py seed_db2
+
 # Server Setup:
 $ mkdir server && cd server
 
@@ -29,6 +45,7 @@ $ python manage.py runserver
   ] 
 ```
 # Seed Django DB:
+<!-- Alternative to seeding the DB from the terminal -->
 <!-- 1. Open Django Shell -->
 ```
 python manage.py shell
@@ -64,7 +81,6 @@ funds = [
     ) for _ in range(5)
 ]
 ```
-
 <!-- 4. Seed holdings -- real stock tickers from yahoo API -->
 ```
 tickers = ["AAPL", "MSFT", "AMZN", "TSLA", "GOOG"]

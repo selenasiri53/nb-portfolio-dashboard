@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <div className="lg:w-40px lg:px-2 lg:py-4 min-h-full bg-neutral-100 rounded-l-4xl space-y-4 flex flex-col items-center">
       {/* Dashboard (Funds) */}
-      <Tooltip title="Dashboard" placement="top" variant="soft">
+      <Tooltip title="Dashboard" placement="bottom" variant="soft">
         <Link
           to="/dashboard"
           className="hover:bg-neutral-200 p-3 rounded-2xl flex justify-center items-center"

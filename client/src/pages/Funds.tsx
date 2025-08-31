@@ -1,4 +1,4 @@
-import FundsTable from "../components/charts/FundsTable";
+import FundsTable from "../components/sections/FundsTable";
 
 const Funds = () => {
   return (
