@@ -14,7 +14,9 @@ $ python manage.py runserver
 ```
     'rest_framework',
     'corsheaders',
+    'django_seed',
 ```
+
 2. Add to MIDDLEWARE
 ```
     'corsheaders.middleware.CorsMiddleware',

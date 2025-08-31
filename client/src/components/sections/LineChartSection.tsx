@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 
 const getPeerFunds = async() => {
-  const res = await fetch('http://127.0.0.1:8000/api/peer-funds');
+  const res = await fetch('http://127.0.0.1:8000/api/peer-performances');
   if (!res.ok) throw new Error('Failed to collect stock prices.');
   return res.json(); 
 
@@ -26,10 +26,9 @@ const PeerDataChart = () => {
 export default PeerDataChart;
 
 
+
+
 // import { Line } from "react-chartjs-2";
-// import { usePeerFunds } from "../../hooks/usePeerFunds";
-// import type { PeerFund } from "../../types/api";
-// // import { useQuery } from "@tanstack/react-query";
 
 // const LineChartSection = () => {
 //   const { data, isLoading, error } = usePeerFunds();

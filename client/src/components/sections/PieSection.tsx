@@ -1,3 +1,5 @@
+// Retrieve fund detail by pk - 
+
 import {
     Chart as ChartJS,
     ArcElement,

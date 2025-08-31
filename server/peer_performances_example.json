@@ -1,0 +1,37 @@
+[
+    {
+      "performance_id": 31,
+      "date": "2019-12-11",
+      "net_asset_value": 0.3608910042941239,
+      "return_percentage": 0.5055274842236044,
+      "peer_fund": 9
+    },
+    {
+      "performance_id": 32,
+      "date": "1985-03-01",
+      "net_asset_value": 0.5834984489960287,
+      "return_percentage": 0.06625525825574441,
+      "peer_fund": 9
+    },
+    {
+      "performance_id": 33,
+      "date": "1999-02-23",
+      "net_asset_value": 0.1861823659885926,
+      "return_percentage": 0.001608639174000559,
+      "peer_fund": 9
+    },
+    {
+      "performance_id": 34,
+      "date": "2025-01-06",
+      "net_asset_value": 0.4394967864097691,
+      "return_percentage": 0.0510263405517698,
+      "peer_fund": 8
+    },
+    {
+      "performance_id": 35,
+      "date": "2024-04-12",
+      "net_asset_value": 0.07209315016612561,
+      "return_percentage": 0.11720308787360478,
+      "peer_fund": 9
+    }
+  ]
