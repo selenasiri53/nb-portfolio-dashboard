@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     # 3rd party
     "corsheaders", # cors
     "rest_framework", # cors
-    # 'django_seed', 
+    'django_seed', 
 
     'portfolio', # custom app
 ]
