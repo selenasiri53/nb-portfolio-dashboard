@@ -14,6 +14,16 @@ Database Seeding:
 To seed the database with example data, run:
 python manage.py seed_db2
 
+# Running the server
+cd server
+<!-- mac -->
+source venv/bin/activate 
+python manage.py runserver
+
+# Running the client 
+cd client
+npm run dev
+
 # Server Setup:
 $ mkdir server && cd server
 

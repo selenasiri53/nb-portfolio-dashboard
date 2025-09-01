@@ -1,9 +1,10 @@
 import { useQuery } from '@tanstack/react-query'
 import { CACHE_TIME, STALE_TIME } from '../commons/constants';
 
+// Use funds for Manager 2
 // `${BASE_URL}/stock-prices`
 const fetchFunds = async () => {
-    const res = await fetch('/api/funds');
+    const res = await fetch('http://127.0.0.1:8000/api/portfolio-managers/2');
     if (!res.ok) throw new Error('Could not retrieve funds.');
 
 

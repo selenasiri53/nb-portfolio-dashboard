@@ -15,7 +15,7 @@ import {
       datasets: [
         {
           label: "Fund Allocation",
-          data: [25, 20, 15, 10, 30], // Percentages
+          data: [25, 20, 15, 10, 30], 
           backgroundColor: [
             "#f59e0b", // amber-500
             "#3b82f6", // blue-500
